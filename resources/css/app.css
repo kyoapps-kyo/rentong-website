@@ -1,0 +1,24 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'animate.css/animate.css';
+@import 'swiper';
+
+/* svg path粗细控制 */
+
+svg.stroke-1 > path {
+  stroke-width: 1;
+}
+svg.stroke-2 > path {
+  stroke-width: 2;
+}
+svg.stroke-3 > path {
+  stroke-width: 3;
+}
+svg.stroke-4 > path {
+  stroke-width: 4;
+}
+
+.h-100 {
+  height: 48rem;
+}
