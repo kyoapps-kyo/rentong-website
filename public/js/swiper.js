@@ -24055,36 +24055,48 @@ __webpack_require__.r(__webpack_exports__);
 
  // configure Swiper to use modules
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
-var spaceBetweenN = window.innerWidth * 0.01;
-var slidesOffsetBeforeN = (window.innerWidth - spaceBetweenN * 4) / 8; // init Swiper:
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]); //サムネイルのスライダーの初期化
 
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper", {
-  // Optional parameters
-  // direction: 'vertical',
+var mySwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.thumbs-slider', {
+  // loop : true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  //各スライドの進行状況を監視
+  watchSlidesProgress: true,
+  //ビューポートにあるスライドに表示クラスを追加
+  watchSlidesVisibility: true,
+  //カーソルをデフォルトから grab に変更
+  grabCursor: true,
+  observer: true,
+  //修改swiper自己或子元素时，自动初始化swiper
+  observeParents: true //修改swiper的父元素时，自动初始化swiper
+
+}); //メインのスライダーの初期化
+
+var mySwiperMain = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.main-slider', {
   loop: true,
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination"
+  thumbs: {
+    //サムネイルのスライダーを指定
+    swiper: mySwiperThumbs
   },
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+  observer: true,
+  //修改swiper自己或子元素时，自动初始化swiper
+  observeParents: true,
+  //修改swiper的父元素时，自动初始化swiper
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: true
   },
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar"
-  },
-  slidesPerView: 4,
-  spaceBetween: spaceBetweenN,
-  slidesOffsetBefore: slidesOffsetBeforeN
+  speed: 2000
+}); //左右按钮
+
+$("#btnPrev").on('click', function () {
+  mySwiperMain.slidePrev(); //设置左右侧淡化
+  //addOpacity();
 });
-$('#btnPrev').click(function () {
-  swiper.slidePrev();
-});
-$('#btnNext').click(function () {
-  swiper.slideNext();
+$("#btnNext").on('click', function () {
+  mySwiperMain.slideNext(); //设置左右侧淡化
+  //addOpacity();
 });
 })();
 

@@ -1,5 +1,5 @@
-<footer class="mt-10 bottom-0 left-0 w-full h-auto bg-black bg-opacity-90 ">
-  <div class="container lg:px-20 lg:mx-auto lg:p-2 md:px-6 flex lg:justify-between md:flex-col text-gray-300 ">
+<footer class=" bottom-0 left-0 w-full h-auto bg-black bg-opacity-90 ">
+  <div class="container lg:px-20 mx-auto lg:p-2  flex lg:justify-between md:justify-center md:flex-col text-gray-300 ">
     <div class=" pt-10 md:text-center">
       <p class=" font-bold lg:text-2xl md:text-3xl"><img class="lg:h-7 lg:mr-3 lg:-mt-1 md:-mt-2 md:h-9 md:mr-1 inline" src="{{ asset('/images/rentong-logo.png') }}" alt="">株式会社仁通</p>
       <div
@@ -35,7 +35,7 @@
                 <p>地址：日本京都市南区西九条池ノ内町18-1</p>
                 <div class=" lg:flex lg:justify-between">
                 <p>电话： +81-75-682-7577</p>
-                <p class=" lg:ml-4">传真：+81-75-682-7588</p>
+                <p class=" lg:ml-4">传真： +81-75-682-7588</p>
                 </div>
             </div>
             <div x-show="tab === 'fu'">
@@ -53,24 +53,24 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col md:pt-4 lg:pt-24">
-        <div class=" font-bold lg:text-lg md:text-sm">
+    <div class="flex flex-col md:pt-4 lg:pt-24 md:mx-auto">
+        <div class=" font-bold lg:text-lg md:text-xs">
         <a href="#" class="  hover:text-red-500">
           买卖
         </a>
-        <span class=" mx-6 ">/</span>
+        <span class=" lg:mx-6 md:mx-2">/</span>
         <a href="" class=" hover:text-green-500">
           租赁
         </a>
-        <span class=" mx-6 ">/</span>
+        <span class=" lg:mx-6 md:mx-2">/</span>
         <a href="" class=" hover:text-blue-500">
           投资项目
         </a>
-        <span class=" mx-6">/</span>
+        <span class=" lg:mx-6 md:mx-2">/</span>
         <a href="" class="hover:text-yellow-500">
           成为房东
         </a>
-        <span class="mx-6">/</span>
+        <span class=" lg:mx-6 md:mx-2">/</span>
         <a href="" class=" hover:text-gray-400">
           关于仁通
         </a>
@@ -94,9 +94,9 @@
         </div>
     </div>
   </div>
-  <div class="container lg:px-20 lg:mx-auto lg:pt-4 md:px-6 flex lg:justify-between lg:mt-6 md:mt-5 md:justify-center border-t border-gray-400 border-opacity-50">
-    <p class=" text-sm text-gray-400 text-opacity-70">© RENTONG all rights reserved (2021~)</p>
-    <p class=" text-sm text-gray-400 text-opacity-60 pb-4">由 <a class="underline font-bold" href="https://blog.kyoapps.com">KYO</a> 制作编码</p>
+  <div class="container lg:px-20 mx-auto lg:pt-4 md:px-6 flex lg:justify-between lg:mt-6 md:mt-5 md:justify-center border-t border-gray-400 border-opacity-50">
+    <p class=" lg:text-sm md:text-xs text-gray-400 text-opacity-70">© RENTONG all rights reserved (2021~)</p>
+    <p class=" lg:text-sm md:text-xs text-gray-400 text-opacity-60 pb-4">由 <a class="underline font-bold" href="https://blog.kyoapps.com">KYO</a> 制作编码</p>
   </div>
 
 </footer>

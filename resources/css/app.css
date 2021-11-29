@@ -4,6 +4,29 @@
 @import 'animate.css/animate.css';
 @import 'swiper';
 
+/* 字体 */
+/* long-cang-regular - chinese-simplified 手写毛笔 */
+@import url('https://fonts.lug.ustc.edu.cn/css2?family=Long+Cang&display=swap');
+
+.font-long-cang {
+  font-family: 'Long Cang', cursive;
+}
+/* 数字英文 */
+@import url('https://fonts.lug.ustc.edu.cn/css2?family=Roboto:wght@100&display=swap');
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+/* title */
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+.font-logo {
+  font-family: 'Potta One', cursive;
+}
+/* 设置全局字体 */
+@import url('https://fonts.lug.ustc.edu.cn/css2?family=Noto+Serif+SC&display=swap');
+
+
+/* 字体 */
+
 /* svg path粗细控制 */
 
 svg.stroke-1 > path {
@@ -21,4 +44,147 @@ svg.stroke-4 > path {
 
 .h-100 {
   height: 48rem;
+}
+
+.img-box {
+  max-width: 100%;
+  height: auto;
+}
+
+#contents-header {
+  background: url(/img/header.jpeg) no-repeat;
+  background-size: cover;
+}
+
+#contents-header {
+  width: 100%;
+  height: 250px;
+  margin: 100px 0 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#contents-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/img/header_overlay.png) repeat;
+  background-size: 2px 2px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+#contents-header::before {
+  content: "";
+  display: block;
+  width: 2500px;
+  height: 40px;
+  background: url(/img/contents_header_top.png) no-repeat;
+  background-size: 2500px auto;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+  left: calc((100vw - 2500px)/2);
+}
+
+#contents-header-ttl {
+  font-size: 40px;
+  font-family: 'Zirnitra', 'Noto Sans JP', sans-serif;
+  position: relative;
+  z-index: 2;
+  color: #ae9c64;
+  line-height: 1em;
+  letter-spacing: 8px;
+  text-indent: 8px;
+  text-shadow: 2px 2px 10px rgb(0 0 0 / 50%);
+}
+
+.contents-header-sub-ttl {
+  display: block;
+  text-align: center;
+  padding: 5px 0 0;
+  color: #fff;
+  font-size: 50%;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+#blackpoint {
+  background: url(/img/header_overlay.png) repeat;
+  background-size: 2px 2px;
+}
+
+
+.special-feature{
+  background: url(/img/special-hana-1.png) right center/160px 200px no-repeat,url(/img/special-hana.png) left center/160px 200px no-repeat,black;
+}
+
+/* .special-feature::before{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 160px;
+  background: url(/img/special-hana.png) no-repeat;
+  background-size: 100px 160px;
+  position: absolute;
+  z-index: 0;
+  top: calc(50% - 50px);
+  left: 0;
+}
+.special-feature::after{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 160px;
+  background: url(/img/special-hana-1.png) no-repeat;
+  background-size: 100px 160px;
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 40px);
+  right: 0;
+} */
+
+.property-twitter{
+  background: url(/img/property-right.png) right bottom no-repeat,url(/img/property-left.png) left bottom no-repeat;
+  background-size: 300px 250px;
+}
+
+
+/* .property-twitter::before{
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: url(/img/property-1.png) no-repeat;
+  background-size: 200px 200px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  background-position: 0px 30px;
+}
+
+.property-twitter::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: url(/img/property-1.png) no-repeat;
+  background-size: 200px 200px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  background-position: 0px 30px;
+} */
+
+.property-list {
+
+  background-color: rgb(204, 204, 204 , 0.2);
 }

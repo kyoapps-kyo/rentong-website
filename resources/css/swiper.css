@@ -1,8 +1,59 @@
-.swiper {
-  width: 100%;
-  height: 300px;
-  }
+* {
+  box-sizing: border-box;
+}
+.swiper-slide img {
+  max-width: 100%;
+}
+/* サムネイルでアクティブなものには枠線を表示 */
+.thumbs-slider .swiper-slide-thumb-active img {
+  border: 2px solid #ec5a35;
+}
+/* アクティブでないサムネイル */
+.thumbs-slider .swiper-slide {
+  opacity: 0.8;
+}
+/* アクティブなサムネイル */
+.thumbs-slider .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fff;
+}
 
-.swiper-slide {
-  width:auto;/*根据内容调整宽度*/
+
+@keyframes zoom {
+  0% {
+  transform: scale(1);
   }
+  100% {
+  transform: scale(1.1);
+  }
+}
+.swiper-slide-active .zoom img {
+  animation: zoom 6s linear 0s 1 normal both;
+}
+
+@keyframes translate1 {
+  0% {
+  transform: scale(1.07) translate(0,0);
+  }
+  100% {
+  transform: scale(1.07) translate(3%, 2%);
+  }
+}
+.swiper-slide-active .translate1 img {
+  animation: translate1 6s linear 0s 1 normal both;
+}
+@keyframes translate2 {
+  0% {
+  transform: scale(1.05) translate(1%,2%);
+  }
+  100% {
+  transform: scale(1.1) translate(-2%, -3%);
+  }
+}
+
+.swiper-slide-active .translate2 img {
+  animation: translate2 6s linear 0s 1 normal both;
+}

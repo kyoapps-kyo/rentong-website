@@ -1,47 +1,54 @@
 // import Swiper JS
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay, Thumbs, EffectFade } from "swiper";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay, Thumbs, EffectFade]);
 
-let spaceBetweenN = window.innerWidth*0.01;
-let slidesOffsetBeforeN = (window.innerWidth-spaceBetweenN*4)/8;
+//サムネイルのスライダーの初期化
+let mySwiperThumbs = new Swiper ('.thumbs-slider', {
+  // loop : true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  //各スライドの進行状況を監視
+  watchSlidesProgress: true,
+  //ビューポートにあるスライドに表示クラスを追加
+  watchSlidesVisibility: true,
+  //カーソルをデフォルトから grab に変更
+  grabCursor: true,
+  observer:true,//修改swiper自己或子元素时，自动初始化swiper
+  observeParents:true,//修改swiper的父元素时，自动初始化swiper
 
-// init Swiper:
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  // direction: 'vertical',
-  loop: true,
-
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-  slidesPerView : 4,
-  spaceBetween :  spaceBetweenN,
-  slidesOffsetBefore : slidesOffsetBeforeN,
 });
 
+//メインのスライダーの初期化
+let mySwiperMain = new Swiper ('.main-slider', {
+  loop: true,
+  thumbs: {
+    //サムネイルのスライダーを指定
+    swiper: mySwiperThumbs
+  },
+  observer:true,//修改swiper自己或子元素时，自动初始化swiper
+  observeParents:true,//修改swiper的父元素时，自动初始化swiper
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: true,
+  },
 
-$('#btnPrev').click(function(){
-  swiper.slidePrev();
-})
-$('#btnNext').click(function(){
-  swiper.slideNext();
-})
+  speed: 2000,
+});
+
+//左右按钮
+$("#btnPrev").on('click', function () {
+  mySwiperMain.slidePrev();
+  //设置左右侧淡化
+  //addOpacity();
+});
+$("#btnNext").on('click', function () {
+  mySwiperMain.slideNext();
+  //设置左右侧淡化
+  //addOpacity();
+});
