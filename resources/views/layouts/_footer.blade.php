@@ -76,19 +76,19 @@
         </a>
         </div>
         <div class=" flex lg:justify-end md:justify-center mt-8">
-          <a href="" class=" rounded-full h-10 w-10 border border-purple-300 flex items-center justify-center">
+          <a href="https://www.instagram.com/rentong_corporation/" title="instagram" target="_blank" class=" rounded-full h-10 w-10 border border-purple-300 flex items-center justify-center">
           <x-iconpark-instagram-o class=" inline-block lg:h-8 text-purple-300"/>
           </a>
           <div class="px-5"></div>
-          <a href="" class=" rounded-full h-10 w-10 border border-blue-300 flex items-center justify-center">
+          <a href="https://twitter.com/rentongcorp" title="twitter" target="_blank" class=" rounded-full h-10 w-10 border border-blue-300 flex items-center justify-center">
           <x-iconpark-twitter-o class="  inline-block lg:h-8 text-blue-300"/>
           </a>
           <div class="px-5"></div>
-          <a href="" class=" rounded-full h-10 w-10 border border-green-300 flex items-center justify-center">
+          <a href="" title="weixin" target="_blank" class=" rounded-full h-10 w-10 border border-green-300 flex items-center justify-center">
           <x-iconpark-wechat-o class="  inline-block h-8 text-green-300"/>
           </a>
           <div class="px-5"></div>
-          <a href="" class=" rounded-full h-10 w-10 border border-red-300 flex items-center justify-center">
+          <a href="https://weibo.com/1466979415?refer_flag=1001030103_" title="weibo" target="_blank" class=" rounded-full h-10 w-10 border border-red-300 flex items-center justify-center">
           <x-iconpark-weibo-o class="  inline-block h-8 text-red-300"/>
           </a>
         </div>
