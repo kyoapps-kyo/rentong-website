@@ -40,7 +40,7 @@
     <div class="w-full lg:w-auto lg:mt-5 lg:flex lg:justify-between lg:mb-4 md:hidden" :class=" atTop ?  'animate__animated animate__backInDown' : 'animate__animated animate__backOutUp' ">
       <div class="">
       <img class="lg:h-16 lg:mr-8 md:h-6 md:mr-4 inline" src="{{ asset('/images/rentong-logo.png') }}" alt="">
-      <a href="#" class=" font-bold lg:text-4xl md:text-lg hover:text-red-500 align-middle">
+      <a href="{{ route('pages.root') }}" class=" font-bold lg:text-4xl md:text-lg hover:text-red-500 align-middle">
         株式会社仁通
       </a>
       </div>
@@ -62,7 +62,7 @@
           成为房东
         </a>
         <span class=" font-bold text-xl mx-6">/</span>
-        <a href="" class=" font-bold text-xl hover:text-gray-500">
+        <a href="{{ route('pages.about') }}" class=" font-bold text-xl hover:text-gray-500">
           关于仁通
         </a>
         </div>

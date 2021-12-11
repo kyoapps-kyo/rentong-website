@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.root');
-});
+
+Route::get('/', 'PagesController@root')->name('pages.root');
+Route::get('/about', 'PagesController@about')->name('pages.about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

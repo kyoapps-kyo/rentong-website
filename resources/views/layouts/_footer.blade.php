@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div x-show="tab === 'osaka'">
-                <p>地址：日本大阪市西区南堀江 1-1-16O TK四ツ橋ビル7F</p>
+                <p>地址：日本大阪市西区南堀江 1-1-16 OTK四ツ橋ビル7F</p>
                 <div class=" lg:flex lg:justify-between">
                 <p>电话： +81-64-395-5758</p>
                 </div>

@@ -4023,7 +4023,23 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
-$(function () {});
+$(function () {
+  var en_info = $("#en_info");
+  var cn_info = $("#cn_info");
+  var info_nav = $("#info_nav");
+  info_nav.on('click', 'li', function () {
+    cn_info.text($(this).text());
+    en_info.text($(this).children().attr("data-en"));
+    $(".infoSelected").removeClass("infoSelected");
+    $(this).children().addClass("infoSelected");
+    var displayId = $(this).children().attr("data-en").toLowerCase().replace(' ', '_');
+    $(".content_visible").addClass("hidden");
+    $(".content_visible").removeClass("content_visible");
+    $("#" + displayId).addClass("content_visible");
+    $("#" + displayId).removeClass("hidden");
+    console.log($("#" + displayId).text());
+  });
+});
 
 /***/ }),
 
