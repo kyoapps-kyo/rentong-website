@@ -25,8 +25,6 @@
 
     <div>
 
-      @include('shared._messages')
-
       @yield('content')
 
     </div>

@@ -221,3 +221,17 @@ svg.stroke-4 > path {
 .textIndent{
   text-indent:2em;
 }
+
+.alert-success{
+  background: rgb(144, 224, 187);
+  padding: 1rem 1rem;
+}
+.alert-danger{
+  background: rgb(204,204,204);
+}
+.alert-warning{
+  background: rgb(204,204,204);
+}
+.alert-info{
+  background: rgb(204,204,204);
+}

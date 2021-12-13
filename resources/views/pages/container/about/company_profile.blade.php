@@ -80,25 +80,25 @@
 
         <div class=" text-indigo-100 pl-10 text-xl w-8/12 h-64">
           <div x-show="tab === 'kyoto'" class=" relative">
-            <p class="pt-10">地址：日本京都市南区西九条池ノ内町18-1</p>
-            <p class="pt-10">电话： +81-75-682-7577</p>
-            <p class="pt-10">传真： +81-75-682-7588</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">地址：日本京都市南区西九条池ノ内町18-1</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">电话： +81-75-682-7577</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">传真： +81-75-682-7588</p>
             <div class=" absolute -bottom-20 right-0">
-              <a href="https://goo.gl/maps/yZcSH6oHujgBZBEt9" target="_blank" class=" block px-6 py-4 bg-black text-white font-bold text-xl rounded-3xl bg-opacity-80">MAP</a>
+              <a href="https://goo.gl/maps/yZcSH6oHujgBZBEt9" target="_blank" class=" block px-4 py-2 bg-black text-white font-bold text-xl rounded-xl bg-opacity-80">MAP</a>
             </div>
           </div>
           <div x-show="tab === 'fu'" class=" relative">
-            <p class="pt-10">地址：日本京都市伏見区深草下川原町 130-4 華信ビル1F</p>
-            <p class="pt-10">电话： +81-75-643-7767</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">地址：日本京都市伏見区深草下川原町 130-4 華信ビル1F</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">电话： +81-75-643-7767</p>
             <div class=" absolute -bottom-20 right-0">
-              <a href="https://goo.gl/maps/5YJy9G3dBo31rEUq9" target="_blank" class=" block px-6 py-4 bg-black text-white font-bold text-xl rounded-3xl bg-opacity-80">MAP</a>
+              <a href="https://goo.gl/maps/5YJy9G3dBo31rEUq9" target="_blank" class=" block px-4 py-2 bg-black text-white font-bold text-xl rounded-xl bg-opacity-80">MAP</a>
             </div>
           </div>
           <div x-show="tab === 'osaka'" class=" relative">
-            <p class="pt-10">地址：日本大阪市西区南堀江 1-1-16 OTK四ツ橋ビル7F</p>
-            <p class="pt-10">电话： +81-64-395-5758</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">地址：日本大阪市西区南堀江 1-1-16 OTK四ツ橋ビル7F</p>
+            <p class="lg:pt-10 md:pt-5 lg:pl-20 md:pl-10">电话： +81-64-395-5758</p>
             <div class=" absolute -bottom-20 right-0">
-              <a href="https://goo.gl/maps/M9eqQoWJFmAwWF679" target="_blank" class=" block px-6 py-4 bg-black text-white font-bold text-xl rounded-3xl bg-opacity-80">MAP</a>
+              <a href="https://goo.gl/maps/M9eqQoWJFmAwWF679" target="_blank" class=" block px-4 py-2 bg-black text-white font-bold text-xl rounded-xl bg-opacity-80">MAP</a>
             </div>
           </div>
         </div>

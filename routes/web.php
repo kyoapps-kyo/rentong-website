@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@root')->name('pages.root');
 Route::get('/about', 'PagesController@about')->name('pages.about');
+Route::get('/about/to/email', 'PagesController@about')->name('pages.about.to.email');
+Route::get('/international_trade','PagesController@international_trade')->name('pages.international_trade');
+Route::post('/about/mail','MailsController@store')->name('sendmail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

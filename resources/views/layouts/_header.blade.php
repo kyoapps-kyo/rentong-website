@@ -23,7 +23,7 @@
                 </div>
               </div>
 
-            <a href="#" class=" rounded-full py-1 px-3 border border-black w-max bg-black text-white text-sm hover:bg-transparent hover:text-black mr-2 ">
+            <a href="{{ route('pages.about.to.email') }}" id="sendEmailBtn" class=" rounded-full py-1 px-3 border border-black w-max bg-black text-white text-sm hover:bg-transparent hover:text-black mr-2 ">
             <x-iconpark-sendemail class=" h-5 w-5 stroke-4 inline animate__animated animate__wobble animate__delay-2s"/>
             邮件咨询
             </a>
@@ -60,6 +60,10 @@
         <span class=" font-bold text-xl mx-6">/</span>
         <a href="" class=" font-bold text-xl hover:text-yellow-500">
           成为房东
+        </a>
+        <span class=" font-bold text-xl mx-6">/</span>
+        <a href="{{ route('pages.international_trade') }}" class=" font-bold text-xl hover:text-yellow-500">
+          国际贸易
         </a>
         <span class=" font-bold text-xl mx-6">/</span>
         <a href="{{ route('pages.about') }}" class=" font-bold text-xl hover:text-gray-500">

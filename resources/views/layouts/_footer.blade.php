@@ -71,7 +71,11 @@
           成为房东
         </a>
         <span class=" lg:mx-6 md:mx-2">/</span>
-        <a href="" class=" hover:text-gray-400">
+        <a href="{{ route('pages.international_trade') }}" class="hover:text-yellow-500">
+          国际贸易
+        </a>
+        <span class=" lg:mx-6 md:mx-2">/</span>
+        <a href="{{ route('pages.about') }}" class=" hover:text-gray-400">
           关于仁通
         </a>
         </div>
