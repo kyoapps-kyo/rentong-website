@@ -67,8 +67,9 @@ $(function () {
     });
 
     //send email
-    if(window.location.href === 'http://rentongwebsite.test/about/to/email'){
-      console.log(window.location.href);
+    let url = window.location.href;
+    if(url.substring(url.length-5) === 'email'){
+      console.log(url);
       $('#info_nav>li').last().trigger("click");
     }
 
