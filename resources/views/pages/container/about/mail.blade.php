@@ -16,12 +16,12 @@
     <div class=" flex justify-center py-8">
       <label class="py-4 mr-2">验证码</label>
       <input type="text" name="captcha">
-      <img src="{{captcha_src('flat')}}" onclick="this.src='/captcha/flat?'+new Date().getTime()" id="captchaCode" alt="captcha" class="captcha">
-      <p class="py-4">看不清？单击更换验证码</p>
+      <img src="{{captcha_src('flat')}}" onclick="this.src='/captcha/flat?'+new Date().getTime()" id="captchaCode" alt="captcha" class="captcha cursor-pointer">
+      <p class="py-4">看不清？单击图片更换验证码</p>
     </div>
     <div class=" flex justify-center">
       <div class=" p-1 border border-black rounded-lg">
-      <input type="submit" value="提交" class=" px-8 py-4 text-xl font-bold bg-black text-white rounded-lg">
+      <input type="submit" value="提交" class=" px-8 py-4 text-xl font-bold bg-black text-white rounded-lg cursor-pointer">
       </div>
     </div>
   </form>
