@@ -1,5 +1,5 @@
-<div class=" container mx-auto lg:px-20 lg:pb-20">
-  <div class="w-full px-40 py-10 shadow-2xl grid grid-cols-2 gap-4 border-gray-400 relative">
+<div class=" container mx-auto lg:px-20 lg:pb-20 md:pb-8">
+  <div class="w-full lg:px-40 lg:py-10 md:p-5 shadow-2xl grid grid-cols-2 gap-4 border-gray-400 relative">
     <div class=" px-5 py-4 text-xl font-bold">公司名称</div>
     <div class=" py-4 text-xl font-bold">株式会社仁通</div>
     <div class=" px-5 py-4 text-xl font-bold">代表人</div>
@@ -11,17 +11,17 @@
   </div>
 </div>
 <div class="concept ">
-  <div class="container mx-auto lg:px-20 py-10">
+  <div class="container mx-auto lg:px-20 lg:py-10 md:px-10 md:py-5">
     <h1 class=" text-3xl text-center text-white">Management Concept</h1>
     <p class=" lg:pt-2 text-xl text-center text-white">/ 经营理念</p>
     <div class=" grid grid-cols-12 gap-y-5 lg:px-40 mt-10 mb-10">
-      <div class=" bg-red-500 p-5 w-20 text-center">愿景</div>
+      <div class=" bg-red-500 lg:p-5 w-20 lg:text-center md:px-2 md:py-8">愿景</div>
       <div class=" col-span-11 bg-white p-5">最大程度地追求和促进日中商务往来的相辅相成，为构建幸福和谐的国际社会和区域社会作出贡献。
       </div>
-      <div class=" bg-green-500 py-8 w-20 text-center">使命</div>
+      <div class=" bg-green-500 lg:py-8 w-20 lg:text-center md:px-2 md:py-12">使命</div>
       <div class=" col-span-11 bg-white p-5">为了使我们提供的服务，使所有的利益相关人员（包括投资商、产权所有者、管理公司、顾客、从业人员等）认可和满足，我们会以持续进步作标杆，不断完善和提高我们的产品质量、服务水平、接待对应的方式方法等等。
       </div>
-      <div class=" bg-blue-500 py-16 w-20 text-center">方针</div>
+      <div class=" bg-blue-500 lg:py-16 w-20 lg:text-center md:px-2 md:py-24">方针</div>
       <div class=" col-span-11 bg-white p-5">1、 （与顾客）:顾客本位
         ”顾客第一位“,站在顾客的角度思考，时刻留心真诚并迅速地接待对应顾客。<br>
         2、 （与合作伙伴）:双赢
@@ -37,10 +37,10 @@
   </div>
 </div>
 
-<div class="container mx-auto lg:px-20 pt-10 pb-40">
+<div class="container mx-auto lg:px-20 lg:pt-10 lg:pb-40 md:pt-5 md:pb-20">
   <h1 class=" text-3xl text-center">Business Content</h1>
   <p class=" lg:pt-2 text-xl text-center">/ 业务内容</p>
-  <div class="w-full px-40 py-10 shadow-2xl lg:mt-10 border-gray-400">
+  <div class="w-full lg:px-40 lg:py-10 md:px-16 md:py-5 shadow-2xl lg:mt-10 md:mt-5 border-gray-400">
     <div class="flex md:flex-wrap mb-4 border-b-2 pb-4">
       <x-iconpark-onekey-o class=" h-14 w-14 stroke-4 text-red-600" />
       <p class=" text-2xl font-bold py-2 pl-6 pr-14 flex-none">房屋租赁</p>
@@ -63,7 +63,7 @@
     </div>
   </div>
 
-  <div class="w-full px-40 py-20 shadow-2xl lg:mt-20 border-gray-400">
+  <div class="w-full px-40 py-20 shadow-2xl lg:mt-20 border-gray-400 md:hidden">
     <div class=" bg-gray-800 bg-opacity-90">
       <div class="flex" x-data="{ tab: 'kyoto' }">
         <div class="flex flex-col">

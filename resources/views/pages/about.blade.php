@@ -17,26 +17,26 @@
   </div>
 </div>
 @endif
-<div class="bg_top lg:h-52 md:h-64">
+<div class="bg_top lg:h-52 md:h-40">
 </div>
-<div class=" container mx-auto lg:px-20 py-20">
-  <h1 class=" text-3xl text-center">Corporate Ren Tong</h1>
-  <p class=" lg:pt-2 text-xl text-center">/ 株式会社仁通</p>
-  <div class=" lg:flex lg:justify-between pt-10">
-    <div class=" text-center flex-none lg:mr-32 p-1 rounded-r-xl border-2 border-red-500">
-      <div class=" relative bg-red-600 bg-opacity-80 py-4 w-60 rounded-r-xl">
-        <h2 id="en_info" class=" text-xl">Company Profile</h2>
-        <p id="cn_info" class=" text-base">/公司信息</p>
+<div class=" container mx-auto lg:px-20 lg:py-20 md:pt-5">
+  <h1 class=" text-3xl text-center md:hidden">Corporate Ren Tong</h1>
+  <p class=" lg:pt-2 text-xl text-center md:hidden">/ 株式会社仁通</p>
+  <div class=" lg:flex lg:justify-between lg:pt-10 md:pt-2">
+    <div class=" text-center flex-none lg:mr-32 p-1 lg:rounded-r-xl md:rounded-tr-xl border-2 border-red-500">
+      <div class=" relative bg-red-600 md:w-full bg-opacity-80 py-4 w-60 lg:rounded-r-xl md:rounded-tr-xl">
+        <h2 id="en_info" class=" lg:text-xl md:text-2xl">Company Profile</h2>
+        <p id="cn_info" class=" lg:text-base md:text-xl">/公司信息</p>
         <span class=" animate-ping absolute w-5 h-5 -right-2 -top-2 rounded-full bg-red-600"></span>
       </div>
     </div>
-    <ul id="info_nav" class="lg:flex lg:justify-between flex-1 py-6 text-lg">
-      <li><button class="infoSelected border border-black shadow-xl py-2 px-8 rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Company Profile">公司信息</button></li>
-      <li><button class=" py-2 px-8 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Message">社长致辞</button></li>
-      <li><button class=" py-2 px-8 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Corporate History">公司历程</button></li>
-      <li><button class=" py-2 px-8 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Staff Introduction">员工介绍</button></li>
-      <li><button class=" py-2 px-8 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Recruit">招聘信息</button></li>
-      <li><button class=" py-2 px-8 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Mail">邮件咨询</button></li>
+    <ul id="info_nav" class="flex justify-between lg:flex-1 lg:py-4 lg:text-lg md:flex-wrap">
+      <li class="my-2"><button class="infoSelected border border-black shadow-xl py-2 px-6 rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Company Profile">公司信息</button></li>
+      <li class="my-2"><button class=" py-2 px-6 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Message">社长致辞</button></li>
+      <li class="my-2"><button class=" py-2 px-6 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Corporate History">公司历程</button></li>
+      <li class="my-2"><button class=" py-2 px-6 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Corporate Structure">公司结构</button></li>
+      <li class="my-2"><button class=" py-2 px-6 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Recruit">招聘信息</button></li>
+      <li class="my-2"><button class=" py-2 px-6 border border-black shadow-xl rounded-xl focus:bg-black focus:text-white animate__animated" data-en="Mail">邮件咨询</button></li>
     </ul>
   </div>
 </div>
@@ -49,8 +49,8 @@
 <div id="corporate_history" class="hidden">
   @include('pages.container.about.corporate_history')
 </div>
-<div id="staff_introduction" class="hidden">
-  @include('pages.container.about.staff_introduction')
+<div id="corporate_structure" class="hidden">
+  @include('pages.container.about.corporate_structure')
 </div>
 <div id="recruit" class="hidden">
   @include('pages.container.about.recruit')

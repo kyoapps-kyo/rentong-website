@@ -1,10 +1,10 @@
-<div class=" container mx-auto lg:px-40 lg:pb-20">
+<div class=" container mx-auto lg:px-40 lg:pb-20 md:pb-20">
   <div class="flex">
-    <div class=" border-gray-100 border-2 shadow-xl w-96 p-16 flex-none">
+    <div class=" border-gray-100 border-2 shadow-xl lg:w-96 lg:p-16 md:hidden lg:flex-none">
       <img src="/images/liucheng.png" alt="">
       <p class=" text-center mt-6 leading-10">仁通代表取缔役<br>刘丞</p>
     </div>
-    <div class="border-gray-100 border-2 shadow-xl p-10 ml-14 text-xl ">
+    <div class="border-gray-100 border-2 shadow-xl lg:p-10 lg:ml-14 lg:text-xl md:text-2xl md:px-10 md:py-10">
       <p class="leading-relaxed textIndent">盛夏之际，祝各位投资商、留学生朋友们日益安康。平日承蒙关照，不胜感激，特在此向各位致以诚挚的问候。</p>
       <p class="leading-relaxed textIndent pt-6">翘首企盼樱花到来的时节转眼过去,伴随着梅雨停歇沐浴盛夏阳光的日子也多了起来。敝公司始终全力以赴以京都不动产行业的魁首为目标不断挑战。今年的前半阶段也在各位热心的支援和协助下，公司业绩平稳发展。</p>
       <p class="leading-relaxed textIndent pt-6">回顾今年的前半阶段，我们提出了大的、长远的目标，首先从光顾敝公司租赁、买卖和民宿管理的各位的期待和需求出发，积极主动地促使我们的服务迈向更优质化，不断改善提升为海外投资家营造更安全安心的投资环境，竭尽全力使用各种各样的方法为各位寻找更优质的物件和收益率更高的物件。</p>

@@ -18,8 +18,8 @@
                 <x-iconpark-wechat class=" h-5 w-5 stroke-4 inline animate__animated animate__bounce animate__delay-1s"/>
                   Rentong
                 </button>
-                <div class=" absolute bg-white w-36 h-36 flex items-center justify-center rounded-lg shadow-lg p-2 animate__animated animate__backInRight z-50" x-show="open" style="display: none;" :class=" atTop ? 'top-28' : 'top-14' " >
-                <img class="z-50" src="{{ asset('/images/wxqrcode-kyotowy.jpeg') }}" alt="">
+                <div class=" absolute bg-white w-36 h-44 flex items-center justify-center rounded-lg shadow-lg p-2 animate__animated animate__backInRight z-50" x-show="open" style="display: none;" :class=" atTop ? 'top-28' : 'top-14' " >
+                <img class="z-50" src="{{ asset('/images/rentongQR.jpeg') }}" alt="">
                 </div>
               </div>
 

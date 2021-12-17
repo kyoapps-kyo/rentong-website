@@ -1,4 +1,4 @@
-<div class=" container mx-auto lg:px-40 lg:pb-20">
+<div class=" container mx-auto lg:px-40 lg:pb-20 md:pb-10">
   <form action="{{ route('sendmail') }}" id="demo-form" method="post">
     @csrf
     <select name="mail_category" class=" w-full shadow-xl rounded-lg">
