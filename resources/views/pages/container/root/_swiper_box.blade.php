@@ -1,7 +1,7 @@
 <div x-data="{ setMarginTopByNavbar : () => { $el.style.marginTop = '10px';
-  (window.outerWidth > 1023) ? ($el.style.marginTop = document.getElementById('navbar').clientHeight + 30 + 'px') : '' } }" x-init="setMarginTopByNavbar()" @load.window="setMarginTopByNavbar()"></div>
+  (window.outerWidth > 1023) ? ($el.style.marginTop = document.getElementById('navbar').clientHeight + 5 + 'px') : '' } }" x-init="setMarginTopByNavbar()" @load.window="setMarginTopByNavbar()"></div>
 <!-- main swiper  -->
-<div class="mt-8 relative lg:container lg:px-20 mx-auto w-auto">
+<div class="mt-2 relative lg:container lg:px-20 mx-auto w-auto">
   <div class="swiper main-slider">
     <div class="swiper-wrapper">
       <!-- slide  -->

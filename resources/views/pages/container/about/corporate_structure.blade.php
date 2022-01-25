@@ -1,4 +1,4 @@
-<div class=" container mx-auto lg:px-20 lg:pb-20 md:pb-10">
+<!-- <div class=" container mx-auto lg:px-20 lg:pb-20 md:pb-10">
   <div class=" grid grid-cols-12 grid-ros-2 lg:gap-x-5 lg:gap-y-10 md:pt-4">
     <div class=" shadow-xl border border-gray-300 col-span-3  lg:p-8 md:p-2 rounded-3xl">
       <div class=" bg-red-400 h-full w-full rounded-3xl lg:py-20 md:py-8 text-center lg:text-3xl md:text-xl font-bold border border-gray-300 shadow"> 代表取締役</div>
@@ -35,4 +35,7 @@
       </div>
     </div>
   </div>
+</div> -->
+<div class=" ">
+
 </div>

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Log;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', 'PagesController@root')->name('pages.root');
-Route::get('/about', 'PagesController@about')->name('pages.about');
-Route::get('/email', 'PagesController@about')->name('pages.about.to.email');
-Route::get('/international_trade','PagesController@international_trade')->name('pages.international_trade');
-Route::post('/about/mail','MailsController@store')->name('sendmail');
 
+Route::group(['middleware'=>'set.locale'], function () {
+    Route::get('/', 'PagesController@root')->name('pages.root');
+    Route::get('/about', 'PagesController@about')->name('pages.about');
+    Route::get('/email', 'PagesController@about')->name('pages.about.to.email');
+    Route::get('/international_trade', 'PagesController@international_trade')->name('pages.international_trade');
+    Route::post('/about/mail', 'MailsController@store')->name('sendmail');
+    Route::get('/setlocale/{locale}', function($locale) {
+        session()->put('locale', $locale);
+        Log::info($locale . "locale");
+        return redirect()->back();
+    })->name('locale');
+});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// require __DIR__ . '/auth.php';

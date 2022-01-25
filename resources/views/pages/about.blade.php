@@ -17,7 +17,9 @@
   </div>
 </div>
 @endif
-<div class="bg_top lg:h-52 md:h-40">
+<div class="hidden_img">
+<div class="bg_top lg:h-40 md:h-36">
+</div>
 </div>
 <div class=" container mx-auto lg:px-20 lg:py-20 md:pt-5">
   <h1 class=" text-3xl text-center md:hidden">Corporate Ren Tong</h1>

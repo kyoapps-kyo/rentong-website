@@ -185,15 +185,18 @@ svg.stroke-4 > path {
 } */
 
 .property-list {
-
   background-color: rgb(204, 204, 204 , 0.2);
 }
 
 
 /* about */
 
+.hidden_img{
+  overflow:hidden;
+}
 .bg_top {
   background:url(/img/header_overlay_gray.png) left top/4px 4px repeat,url(/img/rentong.co.jp2.jpg) left calc(100%)/cover no-repeat;
+
 }
 
 @keyframes zoom {
@@ -204,7 +207,13 @@ svg.stroke-4 > path {
   transform: scale(1.1);
   }
 }
-.bg_top {
+/* .bg_top{
+  overflow:hidden;
+}
+.bg_top img{
+  max-width: 100%;
+} */
+.bg_top{
   animation: zoom 6s linear 0s infinite alternate;
 }
 .infoSelected{
@@ -214,7 +223,9 @@ svg.stroke-4 > path {
 .content_visible{
   visibility: visible;
 }
+
 .concept{
+  max-width: 100%;
   background: url(/img/about-right.png) calc(100% - 4rem) center/80px no-repeat,url(/img/about-left.png) 4rem center/150px no-repeat,rgb(1, 1, 1,0.9);
 }
 
