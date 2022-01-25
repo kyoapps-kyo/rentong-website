@@ -27,6 +27,7 @@ Route::group(['middleware'=>'set.locale'], function () {
         Log::info($locale . "locale");
         return redirect()->back();
     })->name('locale');
+    Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 });
 
 // Route::get('/dashboard', function () {
@@ -34,3 +35,4 @@ Route::group(['middleware'=>'set.locale'], function () {
 // })->middleware(['auth'])->name('dashboard');
 
 // require __DIR__ . '/auth.php';
+
