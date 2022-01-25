@@ -12,7 +12,7 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('name')->index()->comment('名称');
             $table->text('description')->nullable()->comment('描述');
-            $table->integer('build_count')->default(0)->comment('物件数');
+            $table->integer('post_count')->default(0)->comment('帖子数');
         });
     }
 
