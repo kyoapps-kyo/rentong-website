@@ -27,7 +27,7 @@ Route::group(['middleware'=>'set.locale'], function () {
         Log::info($locale . "locale");
         return redirect()->back();
     })->name('locale');
-    Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+    // Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 });
 
 // Route::get('/dashboard', function () {
