@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<img style="width:24px;" src="/images/rentong-logo.png" alt=""> 仁通ウェブシステム',
+    'logo' => '<img style="width:24px;" src="/images/rentong-logo.png" alt=""> 仁通ウェブ',
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => 'Admin',
+    'title' => '仁通管理システム',
 
     /*
     |--------------------------------------------------------------------------
@@ -310,7 +310,7 @@ return [
     | each page
     |
     */
-    'show_version' => false,
+    'show_version' => true,
 
     /*
     |--------------------------------------------------------------------------

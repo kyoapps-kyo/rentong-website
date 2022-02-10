@@ -21,4 +21,9 @@ mix.js('resources/js/app.js', 'public/js')
     .autoload( {
       "jquery": [ '$', 'window.jQuery' ],
   } )
-    .version();
+    .version()
+    .webpackConfig({
+      stats: {
+          children: true,
+      },
+  });

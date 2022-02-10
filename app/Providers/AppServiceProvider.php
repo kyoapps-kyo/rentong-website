@@ -25,7 +25,8 @@ class AppServiceProvider extends ServiceProvider
 	{
 		\App\Models\User::observe(\App\Observers\UserObserver::class);
 		\App\Models\Topic::observe(\App\Observers\TopicObserver::class);
-
+        \App\Models\Img::observe(\App\Observers\ImgObserver::class);
+        \App\Models\Price::observe(\App\Observers\PriceObserver::class);
         //
     }
 }

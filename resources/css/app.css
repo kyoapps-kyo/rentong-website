@@ -3,26 +3,39 @@
 @import 'tailwindcss/utilities';
 @import 'animate.css/animate.css';
 @import 'swiper';
-
 /* 字体 */
 /* long-cang-regular - chinese-simplified 手写毛笔 */
 @import url('https://fonts.lug.ustc.edu.cn/css2?family=Long+Cang&display=swap');
 
-.font-long-cang {
-  font-family: 'Long Cang', cursive;
-}
+
 /* 数字英文 */
 @import url('https://fonts.lug.ustc.edu.cn/css2?family=Roboto:wght@100&display=swap');
+
+/* title */
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+/* 设置全局字体 */
+@import url('https://fonts.lug.ustc.edu.cn/css2?family=Noto+Serif+SC&display=swap');
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
-/* title */
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 .font-logo {
   font-family: 'Potta One', cursive;
 }
-/* 设置全局字体 */
-@import url('https://fonts.lug.ustc.edu.cn/css2?family=Noto+Serif+SC&display=swap');
+.font-long-cang {
+  font-family: 'Long Cang', cursive;
+}
+/* 哀悼色彩，灰白 */
+/*
+html {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+} */
+
+
 
 
 /* 字体 */

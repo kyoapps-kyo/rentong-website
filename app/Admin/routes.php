@@ -10,7 +10,9 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
-
     $router->get('/', 'HomeController@index')->name('home');
-
+    $router->resource('adminusers', "AdminUsersController");
+    $router->resource('topics', "TopicsController");
+    $router->resource('imgs', "ImgsController");
+    $router->get('/api/topics', 'ImgsController@topics')->name('admin.api.topics');
 });

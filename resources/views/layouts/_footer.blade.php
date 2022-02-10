@@ -39,13 +39,13 @@
                 </div>
             </div>
             <div x-show="tab === 'fu'">
-                <p>{{ __('addr')}}：日本京都市伏見区深草下川原町 130-4 華信ビル1F</p>
+                <p>{{ __('addr')}}：日本京都市伏見区深草下川原町 130-4 <br>華信ビル1F</p>
                 <div class=" lg:flex lg:justify-between">
                 <p>{{ __('fushimiTel')}}</p>
                 </div>
             </div>
             <div x-show="tab === 'osaka'">
-                <p>{{ __('addr')}}：日本大阪市西区南堀江 1-1-16 OTK四ツ橋ビル7F</p>
+                <p>{{ __('addr')}}：日本大阪市西区南堀江 1-1-16 OTK四ツ橋ビル<br>7F</p>
                 <div class=" lg:flex lg:justify-between">
                 <p>{{ __('osakaTel')}}</p>
                 </div>

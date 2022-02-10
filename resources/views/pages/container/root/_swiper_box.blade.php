@@ -1,14 +1,14 @@
 <div x-data="{ setMarginTopByNavbar : () => { $el.style.marginTop = '10px';
   (window.outerWidth > 1023) ? ($el.style.marginTop = document.getElementById('navbar').clientHeight + 5 + 'px') : '' } }" x-init="setMarginTopByNavbar()" @load.window="setMarginTopByNavbar()"></div>
 <!-- main swiper  -->
-<div class="mt-2 relative lg:container lg:px-20 mx-auto w-auto">
+<!-- <div class="mt-2 relative lg:container lg:px-20 mx-auto w-auto"> -->
   <div class="swiper main-slider">
     <div class="swiper-wrapper">
       <!-- slide  -->
       <div class="swiper-slide">
-        <div class="slide-img zoom"><img src="{{ asset('/img/build.jpg') }}" alt="">
+        <div class="slide-img zoom "><img src="{{ asset('/img/build.jpg') }}" alt="">
         </div>
-        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20"></div>
+        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20 lg:hidden"></div>
         <div class="slide-content">
           <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
             <p class="lg:text-4xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">2021/10/10</p>
@@ -22,7 +22,7 @@
       <div class="swiper-slide">
         <div class="slide-img translate1"><img src="{{ asset('/img/build.jpg') }}" alt="">
         </div>
-        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20"></div>
+        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20 lg:hidden"></div>
         <div class="slide-content">
           <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
             <p class="lg:text-4xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">2021/11/21</p>
@@ -36,7 +36,7 @@
       <div class="swiper-slide">
         <div class="slide-img translate2"><img src="{{ asset('/img/build2.jpg') }}" alt="">
         </div>
-        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20"></div>
+        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20 lg:hidden"></div>
         <div class="slide-content">
           <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
             <p class="lg:text-4xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">2021/12/09</p>
@@ -48,7 +48,7 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
 <div class=" w-full bg-gray-100 ">
   <div class=" lg:container lg:mx-auto lg:px-20 lg:pt-14 lg:flex lg:justify-between md:pt-6">
