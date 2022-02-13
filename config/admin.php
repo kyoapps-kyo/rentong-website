@@ -406,5 +406,8 @@ return [
     */
     'extensions' => [
 
+        'media-manager' => [
+            'disk' => 'admin'   // Points to the disk set in config/filesystem.php
+        ],
     ],
 ];

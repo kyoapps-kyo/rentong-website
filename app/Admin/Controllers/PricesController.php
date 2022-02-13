@@ -7,6 +7,8 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Http\Request;
+use App\Models\Topic;
 
 class PricesController extends AdminController
 {
@@ -26,19 +28,19 @@ class PricesController extends AdminController
     {
         $grid = new Grid(new Price());
 
-        $grid->column('id', __('Id'));
-        $grid->column('price', __('Price'));
-        $grid->column('rent', __('Rent'));
-        $grid->column('administrative_fee', __('Administrative fee'));
-        $grid->column('gratuity_fee', __('Gratuity fee'));
-        $grid->column('deposit', __('Deposit'));
-        $grid->column('other', __('Other'));
-        $grid->column('topic_id', __('Topic id'));
+        // $grid->column('id', '');
+        $grid->column('topic.title', 'トピック タイトル');
+        $grid->column('price', '売値');
+        $grid->column('rent', '家賃');
+        $grid->column('administrative_fee', '管理費・共益費');
+        $grid->column('gratuity_fee', '礼金');
+        $grid->column('deposit', '敷金');
+        $grid->column('other', '補説');
         $grid->filter(function($filter){
             // 去掉默认的id过滤器
             $filter->disableIdFilter();
             // 在这里添加字段过滤器
-            $filter->like('name', 'name');
+            $filter->like('topic.title', 'トピック タイトル');
 
         });
 
@@ -76,13 +78,22 @@ class PricesController extends AdminController
     {
         $form = new Form(new Price());
 
-        $form->decimal('price', __('Price'));
-        $form->decimal('rent', __('Rent'));
-        $form->decimal('administrative_fee', __('Administrative fee'));
-        $form->decimal('gratuity_fee', __('Gratuity fee'));
-        $form->decimal('deposit', __('Deposit'));
-        $form->text('other', __('Other'));
-        $form->number('topic_id', __('Topic id'));
+        $form->decimal('price', '売値');
+        $form->decimal('rent', '家賃');
+        $form->decimal('administrative_fee', '管理費・共益費');
+        $form->decimal('gratuity_fee', '礼金');
+        $form->decimal('deposit', '敷金');
+        $form->textarea('other', '補説');
+        $form->select('topic_id', 'トピックのタイトル')->options(function ($id) {
+            if ($id) {
+                $topic = Topic::find($id);
+            } else {
+                $topic = Topic::first();
+            }
+            if ($topic) {
+                return [$topic->id => $topic->title];
+            }
+        })->ajax('/rtadmin/api/topics');
 
         return $form;
     }

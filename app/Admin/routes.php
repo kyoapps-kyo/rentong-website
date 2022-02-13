@@ -14,5 +14,9 @@ Route::group([
     $router->resource('adminusers', "AdminUsersController");
     $router->resource('topics', "TopicsController");
     $router->resource('imgs', "ImgsController");
+    $router->resource('imgs', "ImgsController");
+    $router->resource('prices', "PricesController");
+
+    //api选项查询
     $router->get('/api/topics', 'ImgsController@topics')->name('admin.api.topics');
 });

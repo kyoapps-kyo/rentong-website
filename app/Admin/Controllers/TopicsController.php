@@ -56,12 +56,11 @@ class TopicsController extends AdminController
 
         $grid->actions(function ($actions) {
             $actions->disableView();
-            $actions->disableDelete();
         });
         $grid->tools(function ($tools) {
             // 禁用批量删除按钮
             $tools->batch(function ($batch) {
-                $batch->disableDelete();
+
             });
         });
         $grid->filter(function($filter){
@@ -113,21 +112,21 @@ class TopicsController extends AdminController
     {
         $form = new Form(new Topic());
 
-        $form->text('title', 'タイトル');
-        $form->textarea('body', '内容');
+        $form->text('title', 'タイトル')->required()->rules('min:2|max:24|unique:topics');
+        $form->textarea('body', '内容')->required()->rules('min:5|max:240');
         $form->select('category_id','タイプ')->options([ 1 => '売買', 2 => '賃貸'])->when(1, function (Form $form) {
             $form->currency('price.price', '価格')->symbol('￥');
         })->when(2, function (Form $form) {
             $form->currency('price.rent', '家賃')->symbol('￥');
             $form->currency('price.gratuity_fee', '礼金')->symbol('￥');
             $form->currency('price.deposit', '敷金')->symbol('￥');
-        });
+        })->required();
         $form->currency('price.administrative_fee', '管理費・共益費')->symbol('￥');
-        $form->textarea('price.other', '補説');
+        $form->textarea('price.other', '補説')->rules('max:124');
         $form->hasMany('imgs', '画作', function (Form\NestedForm $form) {
-            $form->image('img')->crop(1700, 1000)
-            ->thumbnail('small', 430, 250)
-            ;
+            $form->image('img')
+            ->crop(1700, 1000)
+            ->thumbnail('small', 430, 250);
         });
         $form->setWidth(6, 3);
         $form->confirm('ご確認');
