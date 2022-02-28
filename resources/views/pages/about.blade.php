@@ -21,15 +21,15 @@
 <div class="bg_top lg:h-40 md:h-36">
 </div>
 </div>
-<div class=" container mx-auto lg:px-20 lg:py-20 md:pt-5">
+<div class=" container mx-auto lg:px-20 lg:py-20 md:pt-1 md:px-2">
   <h1 class=" text-3xl text-center md:hidden">Corporate Ren Tong</h1>
   <p class=" lg:pt-2 text-xl text-center md:hidden">/ 株式会社仁通</p>
   <div class=" lg:flex lg:justify-between lg:pt-10 md:pt-2">
-    <div class=" text-center flex-none lg:mr-32 p-1 lg:rounded-r-xl md:rounded-tr-xl border-2 border-red-500">
-      <div class=" relative bg-red-600 md:w-full bg-opacity-80 py-4 w-60 lg:rounded-r-xl md:rounded-tr-xl">
+    <div class=" text-center flex-none lg:mr-32 p-1 lg:rounded-r-xl border-2 border-red-500">
+      <div class=" relative bg-red-600 md:w-full bg-opacity-80 py-4 w-60 lg:rounded-r-xl">
         <h2 id="en_info" class=" lg:text-xl md:text-2xl">Company Profile</h2>
         <p id="cn_info" class=" lg:text-base md:text-xl">/公司信息</p>
-        <span class=" animate-ping absolute w-5 h-5 -right-2 -top-2 rounded-full bg-red-600"></span>
+        <span class=" animate-ping absolute w-5 h-5 -right-2 -top-2 rounded-full bg-red-600 md:hidden"></span>
       </div>
     </div>
     <ul id="info_nav" class="flex justify-between lg:flex-1 lg:py-4 lg:text-lg md:flex-wrap">
@@ -42,22 +42,22 @@
     </ul>
   </div>
 </div>
-<div id="company_profile" class="content_visible">
+<div id="company_profile" class="content_visible md:px-2">
   @include('pages.container.about.company_profile')
 </div>
-<div id="message" class="hidden">
+<div id="message" class="hidden md:px-2">
   @include('pages.container.about.message')
 </div>
-<div id="corporate_history" class="hidden">
+<div id="corporate_history" class="hidden md:px-2">
   @include('pages.container.about.corporate_history')
 </div>
-<div id="corporate_structure" class="hidden">
+<div id="corporate_structure" class="hidden md:px-2">
   @include('pages.container.about.corporate_structure')
 </div>
-<div id="recruit" class="hidden">
+<div id="recruit" class="hidden md:px-2">
   @include('pages.container.about.recruit')
 </div>
-<div id="mail" class="hidden">
+<div id="mail" class="hidden md:px-2">
   @include('pages.container.about.mail')
 </div>
 

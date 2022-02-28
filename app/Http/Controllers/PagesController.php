@@ -29,6 +29,18 @@ class PagesController extends Controller
         // session()->put('locale', $locale);
         return view('pages.root');
     }
+    public function sell(){
+        return view('pages.webinfo');
+    }
+    public function rent(){
+        return view('pages.webinfo');
+    }
+    public function projects(){
+        return view('pages.webinfo');
+    }
+    public function owner(){
+        return view('pages.webinfo');
+    }
     public function about(){
         return view('pages.about');
     }

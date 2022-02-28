@@ -55,19 +55,19 @@
     </div>
     <div class="flex flex-col md:pt-4 lg:pt-24 md:mx-auto">
         <div class=" font-bold lg:text-lg md:text-xs">
-        <a href="#" class="  hover:text-red-500">
+        <a href="{{ route('pages.sell') }}" class="  hover:text-red-500 text-gray-600">
         {{ __('sellBuy')}}
         </a>
         <span class=" lg:mx-6 md:mx-2">/</span>
-        <a href="" class=" hover:text-green-500">
+        <a href="{{ route('pages.rent') }}" class=" hover:text-green-500 text-gray-600">
         {{ __('rent')}}
         </a>
         <span class=" lg:mx-6 md:mx-2">/</span>
-        <a href="" class=" hover:text-blue-500">
+        <a href="{{ route('pages.projects') }}" class=" hover:text-blue-500 text-gray-600">
         {{ __('projects')}}
         </a>
         <span class=" lg:mx-6 md:mx-2">/</span>
-        <a href="" class="hover:text-yellow-500">
+        <a href="{{ route('pages.owner') }}" class="hover:text-yellow-500 text-gray-600">
         {{ __('owner')}}
         </a>
         <span class=" lg:mx-6 md:mx-2">/</span>
@@ -100,7 +100,7 @@
   </div>
   <div class="container lg:px-20 mx-auto lg:pt-4 md:px-6 flex lg:justify-between lg:mt-6 md:mt-5 md:justify-center border-t border-gray-400 border-opacity-50">
     <p class=" lg:text-sm md:text-xs text-gray-400 text-opacity-70">© RENTONG all rights reserved (2021~)</p>
-    <p class=" lg:text-sm md:text-xs text-gray-400 text-opacity-60 pb-4">BY <a class="underline font-bold" href="https://blog.kyoapps.com">KYO</a> CODE&DESIGN</p>
+    <p class=" lg:text-sm md:text-xs text-gray-400 text-opacity-60 pb-4">CODED BY <a class="underline font-bold" href="https://kyoapps.com">KYO</a></p>
   </div>
 
 </footer>

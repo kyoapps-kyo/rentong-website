@@ -15,14 +15,14 @@
     <h1 class=" text-3xl text-center text-white">Management Concept</h1>
     <p class=" lg:pt-2 text-xl text-center text-white">/ 经营理念</p>
     <div class=" grid grid-cols-12 gap-y-5 lg:px-40 mt-10 mb-10">
-      <div class=" bg-red-500 lg:p-5 w-20 lg:text-center md:px-2 md:py-8">愿景</div>
-      <div class=" col-span-11 bg-white p-5">最大程度地追求和促进日中商务往来的相辅相成，为构建幸福和谐的国际社会和区域社会作出贡献。
+      <div class=" bg-red-500 bg-opacity-80 text-gray-200 lg:col-span-1  md:col-span-2 flex justify-center items-center">愿景</div>
+      <div class=" lg:col-span-11 md:col-span-10 bg-white p-5 ">最大程度地追求和促进日中商务往来的相辅相成，为构建幸福和谐的国际社会和区域社会作出贡献。
       </div>
-      <div class=" bg-green-500 lg:py-8 w-20 lg:text-center md:px-2 md:py-12">使命</div>
-      <div class=" col-span-11 bg-white p-5">为了使我们提供的服务，使所有的利益相关人员（包括投资商、产权所有者、管理公司、顾客、从业人员等）认可和满足，我们会以持续进步作标杆，不断完善和提高我们的产品质量、服务水平、接待对应的方式方法等等。
+      <div class=" bg-green-500 bg-opacity-80 text-gray-200 lg:col-span-1  md:col-span-2 flex justify-center items-center">使命</div>
+      <div class=" lg:col-span-11 md:col-span-10 bg-white p-5">为了使我们提供的服务，使所有的利益相关人员（包括投资商、产权所有者、管理公司、顾客、从业人员等）认可和满足，我们会以持续进步作标杆，不断完善和提高我们的产品质量、服务水平、接待对应的方式方法等等。
       </div>
-      <div class=" bg-blue-500 lg:py-16 w-20 lg:text-center md:px-2 md:py-24">方针</div>
-      <div class=" col-span-11 bg-white p-5">1、 （与顾客）:顾客本位
+      <div class=" bg-blue-500 bg-opacity-80 text-gray-200 lg:col-span-1  md:col-span-2 flex justify-center items-center">方针</div>
+      <div class=" lg:col-span-11 md:col-span-10 bg-white p-5">1、 （与顾客）:顾客本位
         ”顾客第一位“,站在顾客的角度思考，时刻留心真诚并迅速地接待对应顾客。<br>
         2、 （与合作伙伴）:双赢
         始终为构建和维持与合作伙伴良好的、长期的合作伙伴关系
@@ -62,18 +62,22 @@
       <p class=" text-2xl py-2">中国日本之间的国际贸易。</p>
     </div>
   </div>
+  <div class="mt-20 md:hidden">
+  <h1 class=" text-3xl text-center">Address</h1>
+  <p class=" lg:pt-2 text-xl text-center">/ 地址</p>
+  </div>
+  <div class="w-full px-40 py-20 shadow-2xl lg:mt-10 border-gray-400 md:hidden">
 
-  <div class="w-full px-40 py-20 shadow-2xl lg:mt-20 border-gray-400 md:hidden">
     <div class=" bg-gray-800 bg-opacity-90">
       <div class="flex" x-data="{ tab: 'kyoto' }">
         <div class="flex flex-col">
-          <button :class="{ 'active font-bold bg-yellow-400 text-gray-100 bg-opacity-90': tab === 'kyoto' }" class=" px-20 py-10 text-gray-200 text-xl font-bold focus:outline-none focus:bg-red-500 focus:text-white hover:bg-red-500 hover:text-gray-300 rounded-t-sm" @click="tab = 'kyoto'">
+          <button :class="{ 'active font-bold bg-gray-400 text-gray-100 bg-opacity-90': tab === 'kyoto' }" class=" px-20 py-10 text-gray-200 text-xl font-bold focus:outline-none focus:bg-red-500 focus:text-white hover:bg-red-500 hover:text-gray-300 rounded-t-sm" @click="tab = 'kyoto'">
             本店
           </button>
-          <button :class="{ 'active font-bold bg-yellow-400 bg-opacity-90 text-gray-100 ': tab === 'fu' }" class="px-20 py-10 text-gray-200 text-xl font-bold focus:outline-none focus:bg-red-500 focus:text-white hover:bg-red-500 hover:text-gray-300  rounded-t-sm" @click="tab = 'fu'">
+          <button :class="{ 'active font-bold bg-gray-400 bg-opacity-90 text-gray-100 ': tab === 'fu' }" class="px-20 py-10 text-gray-200 text-xl font-bold focus:outline-none focus:bg-red-500 focus:text-white hover:bg-red-500 hover:text-gray-300  rounded-t-sm" @click="tab = 'fu'">
             伏见店
           </button>
-          <button :class="{ 'active font-bold bg-yellow-400 bg-opacity-90 text-gray-100 ': tab === 'osaka' }" class="px-20 py-10 text-gray-200 text-xl font-bold focus:outline-none focus:bg-red-500 focus:text-white hover:bg-red-500 hover:text-gray-300  rounded-t-sm" @click="tab = 'osaka'">
+          <button :class="{ 'active font-bold bg-gray-400 bg-opacity-90 text-gray-100 ': tab === 'osaka' }" class="px-20 py-10 text-gray-200 text-xl font-bold focus:outline-none focus:bg-red-500 focus:text-white hover:bg-red-500 hover:text-gray-300  rounded-t-sm" @click="tab = 'osaka'">
             大阪店
           </button>
         </div>

@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Log;
 
 Route::group(['middleware'=>'set.locale'], function () {
     Route::get('/', 'PagesController@root')->name('pages.root');
+    Route::get('/sell', 'PagesController@sell')->name('pages.sell');
+    Route::get('/rent', 'PagesController@rent')->name('pages.rent');
+    Route::get('/projects', 'PagesController@projects')->name('pages.projects');
+    Route::get('/owner', 'PagesController@owner')->name('pages.owner');
     Route::get('/about', 'PagesController@about')->name('pages.about');
     Route::get('/email', 'PagesController@about')->name('pages.about.to.email');
     Route::get('/international_trade', 'PagesController@international_trade')->name('pages.international_trade');

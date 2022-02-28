@@ -5,7 +5,7 @@ namespace App\Admin\Controllers;
 use Encore\Admin\Admin;
 use Illuminate\Support\Arr;
 use App\Models\AdminUser;
-use App\Models\Topic;
+use App\Models\Category;
 
 class Data
 {
@@ -31,15 +31,17 @@ class Data
         return view('admin.data.users', compact('data'));
     }
 
-    public static function topics()
+    public static function categories()
     {
-        $topics = Topic::all();
-        $count = count($topics);
+        $categories = Category::all();
+        $sell_count = $categories->di('1')->post_count;
+        $rent_count = $categories->di('2')->post_count;
         $data = [
-            ['name' => 'システム利用者数',       'value' => $count]
+            ['name' => $categories->di('1')->name,  'value' => $sell_count],
+            ['name' => $categories->di('2')->name,  'value' => $rent_count]
         ];
 
-        return view('admin.data.topics', compact('data'));
+        return view('admin.data.categories', compact('data'));
     }
 
 

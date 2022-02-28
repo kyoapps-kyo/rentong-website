@@ -1,6 +1,6 @@
 <div class="box box-default">
     <div class="box-header with-border">
-        <h3 class="box-title">システム利用者データ</h3>
+        <h3 class="box-title">トピックデータ</h3>
 
         <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -21,12 +21,12 @@
 <script>
 $(function () {
     var ctx = document.getElementById("myChart").getContext('2d');
-    var name = "{{ $data[0]['name'] }}";
-    var value = "{{ $data[0]['value'] }}";
+    var name = ["{{ $data[0]['name'] }}","{{ $data[1]['name'] }}"];
+    var value = ["{{ $data[0]['value'] }}","{{ $data[1]['value'] }}"];
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: [name],
+            labels: name,
             datasets: [{
                 label: '利用者数',
                 data: value,

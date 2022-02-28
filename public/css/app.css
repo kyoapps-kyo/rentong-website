@@ -793,9 +793,6 @@ select{
 .col-span-12{
 	grid-column: span 12 / span 12;
 }
-.col-span-11{
-	grid-column: span 11 / span 11;
-}
 .row-span-3{
 	grid-row: span 3 / span 3;
 }
@@ -898,6 +895,9 @@ select{
 }
 .mb-10{
 	margin-bottom: 2.5rem;
+}
+.mt-20{
+	margin-top: 5rem;
 }
 .box-border{
 	box-sizing: border-box;
@@ -1071,6 +1071,9 @@ select{
 .flex-shrink-0{
 	flex-shrink: 0;
 }
+.table-fixed{
+	table-layout: fixed;
+}
 .origin-top-left{
 	transform-origin: top left;
 }
@@ -1206,6 +1209,9 @@ select{
 .overflow-hidden{
 	overflow: hidden;
 }
+.break-all{
+	word-break: break-all;
+}
 .rounded-md{
 	border-radius: 0.375rem;
 }
@@ -1217,9 +1223,6 @@ select{
 }
 .rounded-lg{
 	border-radius: 0.5rem;
-}
-.rounded-3xl{
-	border-radius: 1.5rem;
 }
 .rounded-xl{
 	border-radius: 0.75rem;
@@ -1384,13 +1387,9 @@ select{
 	--tw-bg-opacity: 1;
 	background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
 }
-.bg-green-300{
+.bg-gray-200{
 	--tw-bg-opacity: 1;
-	background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
-}
-.bg-yellow-200{
-	--tw-bg-opacity: 1;
-	background-color: rgba(253, 230, 138, var(--tw-bg-opacity));
+	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 .bg-green-600{
 	--tw-bg-opacity: 1;
@@ -1481,17 +1480,13 @@ select{
 	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
 }
-.py-8{
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+.px-8{
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 .py-4{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-}
-.px-8{
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
 .px-5{
 	padding-left: 1.25rem;
@@ -5488,13 +5483,13 @@ select{
 /* title */
 /* 设置全局字体 */
 .font-roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .font-logo {
-  font-family: 'Potta One', cursive;
+  font-family: "Potta One", cursive;
 }
 .font-long-cang {
-  font-family: 'Long Cang', cursive;
+  font-family: "Long Cang", cursive;
 }
 /* 哀悼色彩，灰白 */
 /*
@@ -5561,11 +5556,11 @@ svg.stroke-4 > path {
   position: absolute;
   z-index: 2;
   bottom: -30px;
-  left: calc((100vw - 2500px)/2);
+  left: calc((100vw - 2500px) / 2);
 }
 #contents-header-ttl {
   font-size: 40px;
-  font-family: 'Zirnitra', 'Noto Sans JP', sans-serif;
+  font-family: "Zirnitra", "Noto Sans JP", sans-serif;
   position: relative;
   z-index: 2;
   color: #ae9c64;
@@ -5580,14 +5575,15 @@ svg.stroke-4 > path {
   padding: 5px 0 0;
   color: #fff;
   font-size: 50%;
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: "Noto Serif JP", sans-serif;
 }
 #blackpoint {
   background: url(/img/header_overlay.png) repeat;
   background-size: 2px 2px;
 }
-.special-feature{
-  background: url(/img/special-hana-1.png) right center/160px 200px no-repeat,url(/img/special-hana.png) left center/160px 200px no-repeat,black;
+.special-feature {
+  background: url(/img/special-hana-1.png) right center/160px 200px no-repeat,
+    url(/img/special-hana.png) left center/160px 200px no-repeat, black;
 }
 /* .special-feature::before{
   content: "";
@@ -5613,8 +5609,9 @@ svg.stroke-4 > path {
   top: calc(50% - 40px);
   right: 0;
 } */
-.property-twitter{
-  background: url(/img/property-right.png) right bottom no-repeat,url(/img/property-left.png) left bottom no-repeat;
+.property-twitter {
+  background: url(/img/property-right.png) right bottom no-repeat,
+    url(/img/property-left.png) left bottom no-repeat;
   background-size: 300px 250px;
 }
 /* .property-twitter::before{
@@ -5645,22 +5642,22 @@ svg.stroke-4 > path {
   background-position: 0px 30px;
 } */
 .property-list {
-  background-color: rgb(204, 204, 204 , 0.2);
+  background-color: rgb(204, 204, 204, 0.2);
 }
 /* about */
-.hidden_img{
-  overflow:hidden;
+.hidden_img {
+  overflow: hidden;
 }
 .bg_top {
-  background:url(/img/header_overlay_gray.png) left top/4px 4px repeat,url(/img/rentong.co.jp2.jpg) left calc(100%)/cover no-repeat;
-
+  background: url(/img/header_overlay_gray.png) left top/4px 4px repeat,
+    url(/img/rentong.co.jp2.jpg) left calc(100%) / cover no-repeat;
 }
 @keyframes zoom {
   0% {
-  transform: scale(1);
+    transform: scale(1);
   }
   100% {
-  transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 /* .bg_top{
@@ -5669,36 +5666,51 @@ svg.stroke-4 > path {
 .bg_top img{
   max-width: 100%;
 } */
-.bg_top{
+.bg_top {
   -webkit-animation: zoom 6s linear 0s infinite alternate;
           animation: zoom 6s linear 0s infinite alternate;
 }
-.infoSelected{
+.infoSelected {
   background-color: black;
-  color:white;
+  color: white;
 }
-.content_visible{
+.content_visible {
   visibility: visible;
 }
-.concept{
+.concept {
   max-width: 100%;
-  background: url(/img/about-right.png) calc(100% - 4rem) center/80px no-repeat,url(/img/about-left.png) 4rem center/150px no-repeat,rgb(1, 1, 1,0.9);
+  background: url(/img/about-right.png) calc(100% - 4rem) center/80px no-repeat,
+    url(/img/about-left.png) 4rem center/150px no-repeat, rgb(1, 1, 1, 0.9);
 }
-.textIndent{
-  text-indent:2em;
+.textIndent {
+  text-indent: 2em;
 }
-.alert-success{
+.alert-success {
   background: rgb(144, 224, 187);
   padding: 1rem 1rem;
 }
-.alert-danger{
-  background: rgb(204,204,204);
+.alert-danger {
+  background: rgb(204, 204, 204);
 }
-.alert-warning{
-  background: rgb(204,204,204);
+.alert-warning {
+  background: rgb(204, 204, 204);
 }
-.alert-info{
-  background: rgb(204,204,204);
+.alert-info {
+  background: rgb(204, 204, 204);
+}
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 100%;
+  position: relative;
+}
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 .hover\:border-gray-300:hover{
 	--tw-border-opacity: 1;
@@ -5980,6 +5992,12 @@ svg.stroke-4 > path {
 	.md\:right-0{
 		right: 0px;
 	}
+	.md\:col-span-2{
+		grid-column: span 2 / span 2;
+	}
+	.md\:col-span-10{
+		grid-column: span 10 / span 10;
+	}
 	.md\:my-2{
 		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
@@ -5987,14 +6005,6 @@ svg.stroke-4 > path {
 	.md\:mx-1{
 		margin-left: 0.25rem;
 		margin-right: 0.25rem;
-	}
-	.md\:my-8{
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-	}
-	.md\:my-10{
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
 	}
 	.md\:mx-auto{
 		margin-left: auto;
@@ -6052,11 +6062,17 @@ svg.stroke-4 > path {
 	.md\:h-64{
 		height: 16rem;
 	}
-	.md\:h-36{
-		height: 9rem;
+	.md\:h-28{
+		height: 7rem;
 	}
 	.md\:h-60{
 		height: 15rem;
+	}
+	.md\:h-36{
+		height: 9rem;
+	}
+	.md\:h-80{
+		height: 20rem;
 	}
 	.md\:h-9{
 		height: 2.25rem;
@@ -6080,18 +6096,32 @@ svg.stroke-4 > path {
 	.md\:flex-wrap{
 		flex-wrap: wrap;
 	}
+	.md\:items-center{
+		align-items: center;
+	}
 	.md\:justify-center{
 		justify-content: center;
+	}
+	.md\:gap-x-1{
+		-moz-column-gap: 0.25rem;
+		     column-gap: 0.25rem;
+	}
+	.md\:gap-y-2{
+		row-gap: 0.5rem;
 	}
 	.md\:gap-x-3{
 		-moz-column-gap: 0.75rem;
 		     column-gap: 0.75rem;
 	}
+	.md\:gap-x-2{
+		-moz-column-gap: 0.5rem;
+		     column-gap: 0.5rem;
+	}
 	.md\:gap-y-3{
 		row-gap: 0.75rem;
 	}
-	.md\:rounded-tr-xl{
-		border-top-right-radius: 0.75rem;
+	.md\:rounded-xl{
+		border-radius: 0.75rem;
 	}
 	.md\:border-t-0{
 		border-top-width: 0px;
@@ -6103,8 +6133,11 @@ svg.stroke-4 > path {
 		--tw-bg-opacity: 1;
 		background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
 	}
-	.md\:p-2{
-		padding: 0.5rem;
+	.md\:p-1{
+		padding: 0.25rem;
+	}
+	.md\:p-4{
+		padding: 1rem;
 	}
 	.md\:p-5{
 		padding: 1.25rem;
@@ -6117,6 +6150,14 @@ svg.stroke-4 > path {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+	.md\:py-4{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.md\:px-5{
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
 	.md\:py-8{
 		padding-top: 2rem;
 		padding-bottom: 2rem;
@@ -6125,49 +6166,49 @@ svg.stroke-4 > path {
 		padding-left: 2.5rem;
 		padding-right: 2.5rem;
 	}
-	.md\:px-8{
-		padding-left: 2rem;
-		padding-right: 2rem;
+	.md\:py-6{
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
 	}
 	.md\:py-1{
 		padding-top: 0.25rem;
 		padding-bottom: 0.25rem;
 	}
-	.md\:px-6{
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+	.md\:py-2{
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 	}
-	.md\:py-6{
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
+	.md\:px-8{
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 	.md\:px-1{
 		padding-left: 0.25rem;
 		padding-right: 0.25rem;
 	}
-	.md\:py-10{
-		padding-top: 2.5rem;
-		padding-bottom: 2.5rem;
+	.md\:px-2{
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	.md\:px-6{
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	.md\:py-3{
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
 	}
 	.md\:py-5{
 		padding-top: 1.25rem;
 		padding-bottom: 1.25rem;
 	}
-	.md\:px-2{
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-	.md\:py-12{
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-	}
-	.md\:py-24{
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-	}
 	.md\:px-16{
 		padding-left: 4rem;
 		padding-right: 4rem;
+	}
+	.md\:py-10{
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
 	}
 	.md\:pb-20{
 		padding-bottom: 5rem;
@@ -6187,6 +6228,12 @@ svg.stroke-4 > path {
 	.md\:pb-10{
 		padding-bottom: 2.5rem;
 	}
+	.md\:pl-1{
+		padding-left: 0.25rem;
+	}
+	.md\:pt-2{
+		padding-top: 0.5rem;
+	}
 	.md\:pb-4{
 		padding-bottom: 1rem;
 	}
@@ -6199,20 +6246,17 @@ svg.stroke-4 > path {
 	.md\:pb-3{
 		padding-bottom: 0.75rem;
 	}
-	.md\:pl-1{
-		padding-left: 0.25rem;
-	}
 	.md\:pl-5{
 		padding-left: 1.25rem;
 	}
-	.md\:pt-5{
-		padding-top: 1.25rem;
-	}
-	.md\:pt-2{
-		padding-top: 0.5rem;
+	.md\:pt-1{
+		padding-top: 0.25rem;
 	}
 	.md\:pb-8{
 		padding-bottom: 2rem;
+	}
+	.md\:pt-5{
+		padding-top: 1.25rem;
 	}
 	.md\:pl-10{
 		padding-left: 2.5rem;
@@ -6230,6 +6274,10 @@ svg.stroke-4 > path {
 	.md\:text-xl{
 		font-size: 1.25rem;
 		line-height: 1.75rem;
+	}
+	.md\:text-sm{
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 	.md\:text-2xl{
 		font-size: 1.5rem;
@@ -6268,17 +6316,15 @@ svg.stroke-4 > path {
 			max-width: 1536px;
 		}
 	}
+	.lg\:col-span-1{
+		grid-column: span 1 / span 1;
+	}
+	.lg\:col-span-11{
+		grid-column: span 11 / span 11;
+	}
 	.lg\:mx-auto{
 		margin-left: auto;
 		margin-right: auto;
-	}
-	.lg\:my-12{
-		margin-top: 3rem;
-		margin-bottom: 3rem;
-	}
-	.lg\:my-16{
-		margin-top: 4rem;
-		margin-bottom: 4rem;
 	}
 	.lg\:mx-6{
 		margin-left: 1.5rem;
@@ -6298,6 +6344,9 @@ svg.stroke-4 > path {
 	}
 	.lg\:mr-8{
 		margin-right: 2rem;
+	}
+	.lg\:mr-2{
+		margin-right: 0.5rem;
 	}
 	.lg\:mt-11{
 		margin-top: 2.75rem;
@@ -6362,6 +6411,12 @@ svg.stroke-4 > path {
 	.lg\:h-80{
 		height: 20rem;
 	}
+	.lg\:h-32{
+		height: 8rem;
+	}
+	.lg\:h-28{
+		height: 7rem;
+	}
 	.lg\:h-40{
 		height: 10rem;
 	}
@@ -6423,6 +6478,9 @@ svg.stroke-4 > path {
 	.lg\:gap-y-5{
 		row-gap: 1.25rem;
 	}
+	.lg\:rounded-3xl{
+		border-radius: 1.5rem;
+	}
 	.lg\:rounded-r-xl{
 		border-top-right-radius: 0.75rem;
 		border-bottom-right-radius: 0.75rem;
@@ -6430,17 +6488,14 @@ svg.stroke-4 > path {
 	.lg\:p-8{
 		padding: 2rem;
 	}
-	.lg\:p-5{
-		padding: 1.25rem;
+	.lg\:p-10{
+		padding: 2.5rem;
 	}
 	.lg\:p-2{
 		padding: 0.5rem;
 	}
 	.lg\:p-16{
 		padding: 4rem;
-	}
-	.lg\:p-10{
-		padding: 2.5rem;
 	}
 	.lg\:px-20{
 		padding-left: 5rem;
@@ -6454,6 +6509,14 @@ svg.stroke-4 > path {
 		padding-left: 10rem;
 		padding-right: 10rem;
 	}
+	.lg\:py-8{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+	.lg\:py-4{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 	.lg\:py-10{
 		padding-top: 2.5rem;
 		padding-bottom: 2.5rem;
@@ -6466,14 +6529,6 @@ svg.stroke-4 > path {
 		padding-top: 5rem;
 		padding-bottom: 5rem;
 	}
-	.lg\:py-8{
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-	.lg\:py-12{
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-	}
 	.lg\:px-36{
 		padding-left: 9rem;
 		padding-right: 9rem;
@@ -6481,14 +6536,6 @@ svg.stroke-4 > path {
 	.lg\:px-2{
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
-	}
-	.lg\:py-16{
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-	.lg\:py-4{
-		padding-top: 1rem;
-		padding-bottom: 1rem;
 	}
 	.lg\:pb-28{
 		padding-bottom: 7rem;
@@ -6538,8 +6585,8 @@ svg.stroke-4 > path {
 	.lg\:pt-4{
 		padding-top: 1rem;
 	}
-	.lg\:text-center{
-		text-align: center;
+	.lg\:pt-12{
+		padding-top: 3rem;
 	}
 	.lg\:text-4xl{
 		font-size: 2.25rem;
@@ -6572,6 +6619,9 @@ svg.stroke-4 > path {
 	.lg\:text-sm{
 		font-size: 0.875rem;
 		line-height: 1.25rem;
+	}
+	.lg\:font-bold{
+		font-weight: 700;
 	}
 }
 @media (min-width: 1280px){

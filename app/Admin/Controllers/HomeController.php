@@ -35,7 +35,7 @@ class HomeController extends Controller
                     $column->append(Data::users());
                 });
                 $row->column(4, function (Column $column) {
-                    $column->append(Data::topics());
+                    $column->append(Data::categories());
                 });
             })
             ;

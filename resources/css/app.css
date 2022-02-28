@@ -1,29 +1,28 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import 'animate.css/animate.css';
-@import 'swiper';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "animate.css/animate.css";
+@import "swiper";
 /* 字体 */
 /* long-cang-regular - chinese-simplified 手写毛笔 */
-@import url('https://fonts.lug.ustc.edu.cn/css2?family=Long+Cang&display=swap');
-
+@import url("https://fonts.lug.ustc.edu.cn/css2?family=Long+Cang&display=swap");
 
 /* 数字英文 */
-@import url('https://fonts.lug.ustc.edu.cn/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.lug.ustc.edu.cn/css2?family=Roboto:wght@100&display=swap");
 
 /* title */
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
 
 /* 设置全局字体 */
-@import url('https://fonts.lug.ustc.edu.cn/css2?family=Noto+Serif+SC&display=swap');
+@import url("https://fonts.lug.ustc.edu.cn/css2?family=Noto+Serif+SC&display=swap");
 .font-roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .font-logo {
-  font-family: 'Potta One', cursive;
+  font-family: "Potta One", cursive;
 }
 .font-long-cang {
-  font-family: 'Long Cang', cursive;
+  font-family: "Long Cang", cursive;
 }
 /* 哀悼色彩，灰白 */
 /*
@@ -34,9 +33,6 @@ html {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
 } */
-
-
-
 
 /* 字体 */
 
@@ -104,12 +100,12 @@ svg.stroke-4 > path {
   position: absolute;
   z-index: 2;
   bottom: -30px;
-  left: calc((100vw - 2500px)/2);
+  left: calc((100vw - 2500px) / 2);
 }
 
 #contents-header-ttl {
   font-size: 40px;
-  font-family: 'Zirnitra', 'Noto Sans JP', sans-serif;
+  font-family: "Zirnitra", "Noto Sans JP", sans-serif;
   position: relative;
   z-index: 2;
   color: #ae9c64;
@@ -125,7 +121,7 @@ svg.stroke-4 > path {
   padding: 5px 0 0;
   color: #fff;
   font-size: 50%;
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 #blackpoint {
@@ -133,9 +129,9 @@ svg.stroke-4 > path {
   background-size: 2px 2px;
 }
 
-
-.special-feature{
-  background: url(/img/special-hana-1.png) right center/160px 200px no-repeat,url(/img/special-hana.png) left center/160px 200px no-repeat,black;
+.special-feature {
+  background: url(/img/special-hana-1.png) right center/160px 200px no-repeat,
+    url(/img/special-hana.png) left center/160px 200px no-repeat, black;
 }
 
 /* .special-feature::before{
@@ -163,11 +159,11 @@ svg.stroke-4 > path {
   right: 0;
 } */
 
-.property-twitter{
-  background: url(/img/property-right.png) right bottom no-repeat,url(/img/property-left.png) left bottom no-repeat;
+.property-twitter {
+  background: url(/img/property-right.png) right bottom no-repeat,
+    url(/img/property-left.png) left bottom no-repeat;
   background-size: 300px 250px;
 }
-
 
 /* .property-twitter::before{
   content: "";
@@ -198,26 +194,25 @@ svg.stroke-4 > path {
 } */
 
 .property-list {
-  background-color: rgb(204, 204, 204 , 0.2);
+  background-color: rgb(204, 204, 204, 0.2);
 }
-
 
 /* about */
 
-.hidden_img{
-  overflow:hidden;
+.hidden_img {
+  overflow: hidden;
 }
 .bg_top {
-  background:url(/img/header_overlay_gray.png) left top/4px 4px repeat,url(/img/rentong.co.jp2.jpg) left calc(100%)/cover no-repeat;
-
+  background: url(/img/header_overlay_gray.png) left top/4px 4px repeat,
+    url(/img/rentong.co.jp2.jpg) left calc(100%) / cover no-repeat;
 }
 
 @keyframes zoom {
   0% {
-  transform: scale(1);
+    transform: scale(1);
   }
   100% {
-  transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 /* .bg_top{
@@ -226,36 +221,53 @@ svg.stroke-4 > path {
 .bg_top img{
   max-width: 100%;
 } */
-.bg_top{
+.bg_top {
   animation: zoom 6s linear 0s infinite alternate;
 }
-.infoSelected{
+.infoSelected {
   background-color: black;
-  color:white;
+  color: white;
 }
-.content_visible{
+.content_visible {
   visibility: visible;
 }
 
-.concept{
+.concept {
   max-width: 100%;
-  background: url(/img/about-right.png) calc(100% - 4rem) center/80px no-repeat,url(/img/about-left.png) 4rem center/150px no-repeat,rgb(1, 1, 1,0.9);
+  background: url(/img/about-right.png) calc(100% - 4rem) center/80px no-repeat,
+    url(/img/about-left.png) 4rem center/150px no-repeat, rgb(1, 1, 1, 0.9);
 }
 
-.textIndent{
-  text-indent:2em;
+.textIndent {
+  text-indent: 2em;
 }
 
-.alert-success{
+.alert-success {
   background: rgb(144, 224, 187);
   padding: 1rem 1rem;
 }
-.alert-danger{
-  background: rgb(204,204,204);
+.alert-danger {
+  background: rgb(204, 204, 204);
 }
-.alert-warning{
-  background: rgb(204,204,204);
+.alert-warning {
+  background: rgb(204, 204, 204);
 }
-.alert-info{
-  background: rgb(204,204,204);
+.alert-info {
+  background: rgb(204, 204, 204);
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 100%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
