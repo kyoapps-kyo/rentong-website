@@ -5,47 +5,23 @@
   <div class="swiper main-slider">
     <div class="swiper-wrapper">
       <!-- slide  -->
+      @foreach( $topics as $topic)
+      @if($topic->status)
       <div class="swiper-slide">
-        <div class="slide-img zoom "><img src="{{ asset('/img/build.jpg') }}" alt="">
+        <div class="slide-img zoom "><img class=" h-full w-full" src="{{ asset('uploads/'.$topic->imgs[0]->img) }}" alt="">
         </div>
         <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20 lg:hidden"></div>
         <div class="slide-content">
           <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
-            <p class="lg:text-4xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">2021/10/10</p>
+            <p class="lg:text-6xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">{{ $topic->created_at }}</p>
           </div>
           <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 lg:-translate-y-10">
-            <p class="lg:text-5xl bg-red-600 bg-opacity-60 text-white w-max px-4 py-2 md:text-lg  font-long-cang">京都御所北侧改装完成的京町家</p>
+            <p class="lg:text-7xl bg-red-600 bg-opacity-60 text-white w-max px-4 py-2 md:text-lg  font-long-cang">{{ $topic->title }}</p>
           </div>
         </div>
       </div>
-
-      <div class="swiper-slide">
-        <div class="slide-img translate1"><img src="{{ asset('/img/build.jpg') }}" alt="">
-        </div>
-        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20 lg:hidden"></div>
-        <div class="slide-content">
-          <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
-            <p class="lg:text-4xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">2021/11/21</p>
-          </div>
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 lg:-translate-y-10">
-            <p class="lg:text-5xl bg-red-600 bg-opacity-60 text-white w-max px-4 py-2 md:text-lg  font-long-cang">京都岚山新筑高级公寓</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="slide-img translate2"><img src="{{ asset('/img/build2.jpg') }}" alt="">
-        </div>
-        <div id="blackpoint" class=" absolute top-0 left-0 w-full h-full hover:opacity-20 lg:hidden"></div>
-        <div class="slide-content">
-          <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
-            <p class="lg:text-4xl bg-black bg-opacity-60 text-white w-min px-4 py-2 font-roboto">2021/12/09</p>
-          </div>
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 lg:-translate-y-10">
-            <p class="lg:text-5xl bg-red-600 bg-opacity-60 text-white w-max px-4 py-2 md:text-lg  font-long-cang">京都伏见稻荷南改装完成的京町家</p>
-          </div>
-        </div>
-      </div>
+      @endif
+      @endforeach
     </div>
   </div>
 <!-- </div> -->
@@ -70,41 +46,21 @@
   <div class="lg:container lg:px-16 lg:mx-auto md:hidden">
     <div class="swiper thumbs-slider">
       <div class="swiper-wrapper">
+      @foreach( $topics as $topic)
+      @if($topic->status)
         <div class="swiper-slide p-4 relative">
           <div class=" shadow bg-gray-50">
-            <img class="" src="{{ asset('/img/build.jpg') }}" alt="" />
-            <div class=" absolute slide-date transform -translate-y-1/2 bg-red-600 text-white text-lg px-4">2021/10/10</div>
+            <img class="" src="{{ asset('uploads/'.$topic->imgs[0]->img) }}" alt="" />
+            <div class=" absolute slide-date transform -translate-y-1/2 bg-red-600 text-white text-lg px-4">{{ $topic->created_at }}</div>
             <div class=" flex justify-between pt-6">
-              <h2 class=" font-bold text-lg pl-2 underline"> <a href="#">京都御所北侧改装完成的京町家</a></h2>
-              <p class=" font-bold text-lg pr-2">¥2222222</p>
+              <h2 class=" font-bold text-lg pl-2 underline"> <a href="#">{{ $topic->title }}</a></h2>
+              <p class=" font-bold text-lg pr-2">¥{{ $topic->price->number }}</p>
             </div>
-            <p class=" text-xs pt-5 px-2 pb-2">こちらの物件は山陰本線の二条駅より徒歩で16分の場所にあるマンションです。南向き物件のため、日当たりがとても良い物件となっております。即入居可物件のため、お急ぎでお家探しをしている方はぜひお問い合わせください！</p>
+            <p class=" text-xs pt-5 px-2 pb-2">{{ $topic->body }}</p>
           </div>
         </div>
-
-        <div class="swiper-slide p-4 relative">
-          <div class=" shadow bg-gray-50">
-            <img class="" src="{{ asset('/img/build.jpg') }}" alt="" />
-            <div class=" absolute slide-date transform -translate-y-1/2 bg-red-600 text-white text-lg px-4">2021/11/21</div>
-            <div class=" flex justify-between pt-6">
-              <h2 class=" font-bold text-lg pl-2">京都岚山新筑高级公寓</h2>
-              <p class=" font-bold text-lg pr-2">¥2222222</p>
-            </div>
-            <p class=" text-xs pt-5 px-2 pb-2">こちらの物件は山陰本線の二条駅より徒歩で16分の場所にあるマンションです。南向き物件のため、日当たりがとても良い物件となっております。即入居可物件のため、お急ぎでお家探しをしている方はぜひお問い合わせください！</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide p-4 relative">
-          <div class=" shadow bg-gray-50">
-            <img class="" src="{{ asset('/img/build2.jpg') }}" alt="" />
-            <div class=" absolute slide-date transform -translate-y-1/2 bg-red-600 text-white text-lg px-4">2021/12/09</div>
-            <div class=" flex justify-between pt-6">
-              <h2 class=" font-bold text-lg pl-2">京都伏见稻荷南改装完成的京町家</h2>
-              <p class=" font-bold text-lg pr-2">¥2222222</p>
-            </div>
-            <p class=" text-xs pt-5 px-2 pb-2">こちらの物件は山陰本線の二条駅より徒歩で16分の場所にあるマンションです。南向き物件のため、日当たりがとても良い物件となっております。即入居可物件のため、お急ぎでお家探しをしている方はぜひお問い合わせください！</p>
-          </div>
-        </div>
+      @endif
+      @endforeach
 
       </div>
     </div>

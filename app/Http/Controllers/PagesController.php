@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Models\Topic;
 
 class PagesController extends Controller
 {
@@ -27,7 +28,8 @@ class PagesController extends Controller
         // }
         // $locale = 'ja';
         // session()->put('locale', $locale);
-        return view('pages.root');
+        $topics = Topic::all();
+        return view('pages.root', compact('topics'));
     }
     public function sell(){
         return view('pages.webinfo');

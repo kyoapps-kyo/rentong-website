@@ -34,11 +34,11 @@ class Data
     public static function categories()
     {
         $categories = Category::all();
-        $sell_count = $categories->di('1')->post_count;
-        $rent_count = $categories->di('2')->post_count;
+        $sell_count = $categories[0]->post_count;
+        $rent_count = $categories[1]->post_count;
         $data = [
-            ['name' => $categories->di('1')->name,  'value' => $sell_count],
-            ['name' => $categories->di('2')->name,  'value' => $rent_count]
+            ['name' => $categories[0]->name,  'value' => $sell_count],
+            ['name' => $categories[1]->name,  'value' => $rent_count]
         ];
 
         return view('admin.data.categories', compact('data'));

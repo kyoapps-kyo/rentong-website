@@ -31,4 +31,9 @@ class Topic extends Model
     public function imgs(){
         return $this->hasMany(Img::class);
     }
+
+    public function getCreatedAtAttribute($value)
+    {
+        return str_replace('-', '/', $this->updated_at->toDateString());
+    }
 }

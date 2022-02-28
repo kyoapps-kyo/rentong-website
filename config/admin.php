@@ -409,5 +409,22 @@ return [
         'media-manager' => [
             'disk' => 'admin'   // Points to the disk set in config/filesystem.php
         ],
+
+        'latlong' => [
+
+            // Whether to enable this extension, defaults to true
+            'enable' => true,
+
+            // Specify the default provider
+            'default' => 'google',
+
+            // According to the selected provider above, fill in the corresponding api_key
+            'providers' => [
+
+                'google' => [
+                    'api_key' => env('GOOGLE_API_KEY','AIzaSyCwDftQpBKf-XCU_p0ChEWu8hiJ5f7nPOw'),
+                ],
+            ]
+        ]
     ],
 ];

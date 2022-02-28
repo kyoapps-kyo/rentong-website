@@ -31,7 +31,7 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->from('web@rentong.co.jp')
+        return $this->from('web@rentong.co.jp','RENTONG HOME PAGE')
                     ->view('mail');
     }
 }

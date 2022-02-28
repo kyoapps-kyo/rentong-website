@@ -13,4 +13,8 @@ class Price extends Model
     public function topic(){
         return $this->belongsTo(Topic::class);
     }
+    public function getNumberAttribute()
+    {
+        return $this->price ? (intval($this->price/10000).' 万') : (intval($this->rent/10000).' 万');
+    }
 }

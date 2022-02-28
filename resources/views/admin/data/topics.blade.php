@@ -11,8 +11,7 @@
 
     <!-- /.box-header -->
     <div class="box-body">
-          <canvas id="myChart"></canvas>
-          {{ $data[0]['name'] }}
+          <canvas id="topicsChart"></canvas>
     </div>
     <!-- /.box-body -->
 </div>
@@ -21,7 +20,7 @@
 
 <script>
 $(function () {
-    var ctx = document.getElementById("myChart").getContext('2d');
+    var ctx = document.getElementById("topicsChart").getContext('2d');
     var name = "{{ $data[0]['name'] }}";
     var value = "{{ $data[0]['value'] }}";
     var myChart = new Chart(ctx, {

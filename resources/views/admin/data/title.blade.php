@@ -29,7 +29,7 @@
     仁通システム
 </div>
 <div class="links">
-    <a href="https://github.com/z-song/laravel-admin" target="_blank"> Server console</a>
-    <a href="http://laravel-admin.org/docs"  target="_blank">Documentation</a>
-    <a href="http://laravel-admin.org/demo"  target="_blank">Home page</a>
+    <a href="https://github.com/kyoapps-kyo/rentong-website" target="_blank"> Server console</a>
+    <a href="https://github.com/kyoapps-kyo/rentong-website"  target="_blank">Documentation</a>
+    <a href="https://rentong-group.co.jp"  target="_blank">Home page</a>
 </div>

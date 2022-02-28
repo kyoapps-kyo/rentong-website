@@ -15,7 +15,7 @@ class CreatePricesTable extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->increments('id');
-            $table->decimal('price')->nullable();
+            $table->decimal('price','11')->nullable();
             $table->decimal('rent')->nullable();
             $table->decimal('administrative_fee')->nullable();
             $table->decimal('gratuity_fee')->nullable();

@@ -53,6 +53,7 @@ class TopicsController extends AdminController
         $grid->column('lastEditAdminUser.name','更新者')->width('90');
         $grid->created_at('作成日時')->width('90')->sortable();
         $grid->updated_at('更新日時')->width('90')->sortable();
+        $grid->column('status', '注目')->switch();
 
         $grid->actions(function ($actions) {
             $actions->disableView();
@@ -113,6 +114,12 @@ class TopicsController extends AdminController
         $form = new Form(new Topic());
 
         $form->text('title', 'タイトル')->required()->rules('min:2|max:24|unique:topics');
+        $form->switch('status','注目')->default(false);
+        $form->text('postcode','郵便番号')->icon('fa-map-signs')->rules('required|size:7');
+            $form->text('prefecture','都道府县')->readonly();
+            $form->text('city','市区')->readonly();
+            $form->text('suburb','街道')->readonly();
+            $form->text('detail_address','详细地址');
         $form->textarea('body', '内容')->required()->rules('min:5|max:240');
         $form->select('category_id','タイプ')->options([ 1 => '売買', 2 => '賃貸'])->when(1, function (Form $form) {
             $form->currency('price.price', '価格')->symbol('￥');
@@ -123,9 +130,10 @@ class TopicsController extends AdminController
         })->required();
         $form->currency('price.administrative_fee', '管理費・共益費')->symbol('￥');
         $form->textarea('price.other', '補説')->rules('max:124');
+        $form->latlong('latitude', 'longitude', 'Position')->default(['lat' => 34.98455650, 'lng' => 135.75357201207106])->height('500');
         $form->hasMany('imgs', '画作', function (Form\NestedForm $form) {
             $form->image('img')
-            ->crop(1700, 1000)
+            ->resize(1980, 1164)
             ->thumbnail('small', 430, 250);
         });
         $form->setWidth(6, 3);
