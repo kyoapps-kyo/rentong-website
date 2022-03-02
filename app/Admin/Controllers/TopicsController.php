@@ -132,9 +132,10 @@ class TopicsController extends AdminController
         $form->textarea('price.other', '補説')->rules('max:124');
         $form->latlong('latitude', 'longitude', 'Position')->default(['lat' => 34.98455650, 'lng' => 135.75357201207106])->height('500');
         $form->hasMany('imgs', '画作', function (Form\NestedForm $form) {
-            $form->image('img')
-            ->resize(1980, 1164)
-            ->thumbnail('small', 430, 250);
+            // $form->image('img')
+            //->resize(1980, 1164)
+            //->thumbnail('small', 430, 250);
+            $form->image('img');
         });
         $form->setWidth(6, 3);
         $form->confirm('ご確認');
