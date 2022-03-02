@@ -28,7 +28,7 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 0,
-                    "order" => 4,
+                    "order" => 9,
                     "title" => "Admin",
                     "icon" => "fa-tasks",
                     "uri" => "",
@@ -36,7 +36,7 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 2,
-                    "order" => 5,
+                    "order" => 10,
                     "title" => "Users",
                     "icon" => "fa-users",
                     "uri" => "auth/users",
@@ -44,7 +44,7 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 2,
-                    "order" => 6,
+                    "order" => 11,
                     "title" => "Roles",
                     "icon" => "fa-user",
                     "uri" => "auth/roles",
@@ -52,7 +52,7 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 2,
-                    "order" => 7,
+                    "order" => 12,
                     "title" => "Permission",
                     "icon" => "fa-ban",
                     "uri" => "auth/permissions",
@@ -60,7 +60,7 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 2,
-                    "order" => 8,
+                    "order" => 13,
                     "title" => "Menu",
                     "icon" => "fa-bars",
                     "uri" => "auth/menu",
@@ -68,7 +68,7 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 2,
-                    "order" => 9,
+                    "order" => 14,
                     "title" => "Operation log",
                     "icon" => "fa-history",
                     "uri" => "auth/logs",
@@ -76,18 +76,114 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "parent_id" => 0,
-                    "order" => 2,
+                    "order" => 8,
                     "title" => "利用者管理",
                     "icon" => "fa-users",
                     "uri" => "/adminusers",
                     "permission" => NULL
                 ],
                 [
-                    "parent_id" => 0,
+                    "parent_id" => 12,
                     "order" => 3,
-                    "title" => "ポスト管理",
+                    "title" => "ポスト",
                     "icon" => "fa-clone",
                     "uri" => "/topics",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 9,
+                    "order" => 4,
+                    "title" => "イメージ",
+                    "icon" => "fa-picture-o",
+                    "uri" => "/imgs",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 9,
+                    "order" => 5,
+                    "title" => "金額",
+                    "icon" => "fa-diamond",
+                    "uri" => "/prices",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 0,
+                    "order" => 2,
+                    "title" => "オペレーション",
+                    "icon" => "fa-pencil",
+                    "uri" => NULL,
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 0,
+                    "order" => 15,
+                    "title" => "Helpers",
+                    "icon" => "fa-gears",
+                    "uri" => NULL,
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 13,
+                    "order" => 16,
+                    "title" => "Scaffold",
+                    "icon" => "fa-keyboard-o",
+                    "uri" => "helpers/scaffold",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 13,
+                    "order" => 17,
+                    "title" => "Database terminal",
+                    "icon" => "fa-database",
+                    "uri" => "helpers/terminal/database",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 13,
+                    "order" => 18,
+                    "title" => "Laravel artisan",
+                    "icon" => "fa-terminal",
+                    "uri" => "helpers/terminal/artisan",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 13,
+                    "order" => 19,
+                    "title" => "Routes",
+                    "icon" => "fa-list-alt",
+                    "uri" => "helpers/routes",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 0,
+                    "order" => 20,
+                    "title" => "Media manager",
+                    "icon" => "fa-file",
+                    "uri" => "media",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 12,
+                    "order" => 6,
+                    "title" => "貿易事業",
+                    "icon" => "fa-bars",
+                    "uri" => "/trades",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 12,
+                    "order" => 7,
+                    "title" => "会社情報",
+                    "icon" => "fa-info",
+                    "uri" => NULL,
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 21,
+                    "order" => 0,
+                    "title" => "history-images",
+                    "icon" => "fa-file-picture-o",
+                    "uri" => "/history-imgs",
                     "permission" => NULL
                 ]
             ]
@@ -137,6 +233,18 @@ class AdminTablesSeeder extends Seeder
                     "slug" => "topics",
                     "http_method" => "",
                     "http_path" => "/topics*"
+                ],
+                [
+                    "name" => "Admin helpers",
+                    "slug" => "ext.helpers",
+                    "http_method" => "",
+                    "http_path" => "/helpers/*"
+                ],
+                [
+                    "name" => "Media manager",
+                    "slug" => "ext.media-manager",
+                    "http_method" => "",
+                    "http_path" => "/media*"
                 ]
             ]
         );
@@ -176,6 +284,26 @@ class AdminTablesSeeder extends Seeder
                     "menu_id" => 9
                 ],
                 [
+                    "role_id" => 1,
+                    "menu_id" => 10
+                ],
+                [
+                    "role_id" => 1,
+                    "menu_id" => 11
+                ],
+                [
+                    "role_id" => 1,
+                    "menu_id" => 13
+                ],
+                [
+                    "role_id" => 1,
+                    "menu_id" => 18
+                ],
+                [
+                    "role_id" => 1,
+                    "menu_id" => 20
+                ],
+                [
                     "role_id" => 2,
                     "menu_id" => 8
                 ],
@@ -184,8 +312,44 @@ class AdminTablesSeeder extends Seeder
                     "menu_id" => 9
                 ],
                 [
+                    "role_id" => 2,
+                    "menu_id" => 10
+                ],
+                [
+                    "role_id" => 2,
+                    "menu_id" => 11
+                ],
+                [
+                    "role_id" => 2,
+                    "menu_id" => 13
+                ],
+                [
+                    "role_id" => 2,
+                    "menu_id" => 18
+                ],
+                [
+                    "role_id" => 2,
+                    "menu_id" => 20
+                ],
+                [
                     "role_id" => 3,
                     "menu_id" => 9
+                ],
+                [
+                    "role_id" => 3,
+                    "menu_id" => 10
+                ],
+                [
+                    "role_id" => 3,
+                    "menu_id" => 11
+                ],
+                [
+                    "role_id" => 3,
+                    "menu_id" => 18
+                ],
+                [
+                    "role_id" => 3,
+                    "menu_id" => 20
                 ]
             ]
         );
