@@ -7,7 +7,7 @@
     <div class=" absolute slide-date transform lg:-translate-y-full md:-translate-y-1/2 bg-red-600 text-white text-lg px-4">{{ $topic->created_at }}</div>
     <div class=" flex justify-between px-5 pt-10">
       <h2 class=" font-bold text-lg">{{ $topic->title }}</h2>
-      <p class=" font-bold text-sm">¥{{ $topic->price->number }}</p>
+      <p class=" font-bold text-lg">¥{{ $topic->price->number }}</p>
     </div>
     <p class=" text-xs px-5 pt-5">{{ $topic->body }}</p>
   </div>

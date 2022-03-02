@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Topic;
+use App\Models\InternationalTrade;
+use App\Models\HistoryImg;
 
 class PagesController extends Controller
 {
@@ -44,9 +46,13 @@ class PagesController extends Controller
         return view('pages.webinfo');
     }
     public function about(){
-        return view('pages.about');
+        // $history_years = array_unique(HistoryImg::where('year', '>', '2011')->orderBy('year', 'DESC')->pluck('year')->toArray());
+        $history_imgs = HistoryImg::where('year', '>', '2011')->orderBy('year', 'DESC')->get();
+        $history_years = array_unique($history_imgs->pluck('year')->toArray());
+        return view('pages.about', compact('history_years','history_imgs'));
     }
     public function international_trade(){
-        return view('pages.international_trade');
+        $trades = InternationalTrade::all();
+        return view('pages.international_trade', compact('trades'));
     }
 }

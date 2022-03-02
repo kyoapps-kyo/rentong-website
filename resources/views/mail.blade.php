@@ -7,7 +7,7 @@
   <tr>
     <td>
       <div style="border: #36649d 1px dashed;margin: 30px;padding: 20px"> <label style="font-size: 22px;color: #36649d;font-weight: bold">一封用户发来的咨询邮件</label>
-        <p style="font-size: 16px">来自亲爱的&nbsp;<label style="font-weight: bold"> {{ $info->mail_name }}&nbsp;( {{ $info->mail_name_katakana }} )</label></p>
+        <p style="font-size: 16px">来自&nbsp;<label style="font-weight: bold"> {{ $info->mail_name }}&nbsp;( {{ $info->mail_name_katakana }} )</label></p>
         <p style="font-size: 16px">{{ $info->mail }}</p>
         <p style="font-size: 16px">咨询内容为</p>
         <p style="font-size: 16px">{{ $info->mail_category }}</p>
@@ -26,7 +26,7 @@
   <tr>
     <td>
       <div align="right" style="margin: 40px;border-top: solid 1px gray" id="bottomTime">
-        <p style="margin-right: 20px">KYOAPPS</p> <label style="margin-right: 20px">Powered</label>
+        <p style="margin-right: 20px">Powered by</p> <label style="margin-right: 20px"><a href="https://kyoapps.com" target="_blank" rel="noopener noreferrer">KYOAPPS</a></label>
       </div>
     </td>
   </tr>

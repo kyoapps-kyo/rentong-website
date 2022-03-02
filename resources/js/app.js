@@ -42,16 +42,16 @@ $(function () {
     let years = $(".years");
     years.on("click", function() {
       $(".year-selected")
-      .addClass("text-lg")
-      .removeClass("text-2xl font-bold year-selected")
+      .addClass("lg:text-lg md:text-sm")
+      .removeClass("lg:text-2xl md:text-base font-bold year-selected")
       .prev()
       .removeClass("h-10 w-10")
       .addClass("h-8 w-8")
       .parent()
       .addClass("opacity-70");
       $(this)
-      .addClass("text-2xl font-bold year-selected")
-      .removeClass("text-lg")
+      .addClass("lg:text-2xl md:text-sm font-bold year-selected")
+      .removeClass("lg:text-lg md:text-sm")
       .prev()
       .removeClass("h-8 w-8")
       .addClass("h-10 w-10")

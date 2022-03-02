@@ -53,8 +53,8 @@
             <img class="" src="{{ asset('uploads/'.$topic->imgs[0]->img) }}" alt="" />
             <div class=" absolute slide-date transform -translate-y-1/2 bg-red-600 text-white text-lg px-4">{{ $topic->created_at }}</div>
             <div class=" flex justify-between pt-6">
-              <h2 class=" font-bold text-lg pl-2 underline"> <a href="#">{{ $topic->title }}</a></h2>
-              <p class=" font-bold text-lg pr-2">¥{{ $topic->price->number }}</p>
+              <h2 class=" font-bold text-lg pl-2"> <a class="hover:text-blue-700" href="#">{{ $topic->title }}</a></h2>
+              <p class=" font-bold text-xl pr-2">¥{{ $topic->price->number }}</p>
             </div>
             <p class=" text-xs pt-5 px-2 pb-2">{{ $topic->body }}</p>
           </div>
