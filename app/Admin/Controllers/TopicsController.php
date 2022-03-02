@@ -49,8 +49,8 @@ class TopicsController extends AdminController
             return new Table(['金額', '家賃', '管理費', '礼金', '敷金', '補説'], $price->toArray());
         })
         ->width('90');
-        $grid->column('adminUser.name','オーサー')->width('90');
-        $grid->column('lastEditAdminUser.name','更新者')->width('90');
+        //$grid->column('adminUser.name','オーサー')->width('90');
+        //$grid->column('lastEditAdminUser.name','更新者')->width('90');
         $grid->created_at('作成日時')->width('90')->sortable();
         $grid->updated_at('更新日時')->width('90')->sortable();
         $grid->column('status', '注目')->switch();
@@ -69,8 +69,8 @@ class TopicsController extends AdminController
             $filter->disableIdFilter();
             // 在这里添加字段过滤器
             $filter->like('title', 'タイトル');
-            $filter->like('adminUser.name', 'オーサー');
-            $filter->like('lastEditAdminUser.name', '更新者');
+            //$filter->like('adminUser.name', 'オーサー');
+            //$filter->like('lastEditAdminUser.name', '更新者');
             $filter->equal('category.name','種類')->select(['売買' => '売買', '賃貸' => '賃貸']);
         });
 

@@ -1032,12 +1032,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Encore\\Admin\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "Encore\\Admin\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
