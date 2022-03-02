@@ -87,7 +87,7 @@ class AdminTablesSeeder extends Seeder
                     "order" => 3,
                     "title" => "ポスト",
                     "icon" => "fa-clone",
-                    "uri" => "/topics",
+                    "uri" => NULL,
                     "permission" => NULL
                 ],
                 [
@@ -313,6 +313,14 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "role_id" => 1,
+                    "menu_id" => 21
+                ],
+                [
+                    "role_id" => 1,
+                    "menu_id" => 22
+                ],
+                [
+                    "role_id" => 1,
                     "menu_id" => 23
                 ],
                 [
@@ -345,6 +353,14 @@ class AdminTablesSeeder extends Seeder
                 ],
                 [
                     "role_id" => 2,
+                    "menu_id" => 21
+                ],
+                [
+                    "role_id" => 2,
+                    "menu_id" => 22
+                ],
+                [
+                    "role_id" => 2,
                     "menu_id" => 23
                 ],
                 [
@@ -366,6 +382,14 @@ class AdminTablesSeeder extends Seeder
                 [
                     "role_id" => 3,
                     "menu_id" => 20
+                ],
+                [
+                    "role_id" => 3,
+                    "menu_id" => 21
+                ],
+                [
+                    "role_id" => 3,
+                    "menu_id" => 22
                 ],
                 [
                     "role_id" => 3,
