@@ -189,7 +189,7 @@ class AdminTablesSeeder extends Seeder
                 [
                     "parent_id" => 9,
                     "order" => 4,
-                    "title" => "ポスト",
+                    "title" => "ポスト編集",
                     "icon" => "fa-archive",
                     "uri" => "/topics",
                     "permission" => NULL
