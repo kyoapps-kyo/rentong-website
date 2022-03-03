@@ -110,7 +110,7 @@ class TopicsController extends AdminController
             ->thumbnail('small', 430, 250);
         });
         $form->setWidth(6, 3);
-        $form->confirm('ご確認');
+        //$form->confirm('ご確認');
         return $form;
     }
 }
