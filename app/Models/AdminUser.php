@@ -9,4 +9,8 @@ class AdminUser extends Model
 {
     use HasFactory;
 
+    public function topics(){
+        return $this->hasMany(Img::class);
+    }
+
 }

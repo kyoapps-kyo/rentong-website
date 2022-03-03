@@ -32,7 +32,7 @@ class AddAddressToPostTable extends Migration
     {
         Schema::table('topics', function (Blueprint $table) {
             //
-            $table->dropColumn(['prefecture','city','suburb','map','postcode','detail_address']);
+            $table->dropColumn(['prefecture','city','suburb','postcode','detail_address']);
         });
     }
 }

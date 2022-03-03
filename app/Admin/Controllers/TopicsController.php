@@ -6,7 +6,6 @@ use App\Models\Topic;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
-use Encore\Admin\Show;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Widgets\Table;
 
@@ -49,8 +48,8 @@ class TopicsController extends AdminController
             return new Table(['金額', '家賃', '管理費', '礼金', '敷金', '補説'], $price->toArray());
         })
         ->width('90');
-        //$grid->column('adminUser.name','オーサー')->width('90');
-        //$grid->column('lastEditAdminUser.name','更新者')->width('90');
+        $grid->column('adminUser.name','オーサー')->width('90');
+        $grid->column('lastEditAdminUser.name','更新者')->width('90');
         $grid->created_at('作成日時')->width('90')->sortable();
         $grid->updated_at('更新日時')->width('90')->sortable();
         $grid->column('status', '注目')->switch();
@@ -69,39 +68,13 @@ class TopicsController extends AdminController
             $filter->disableIdFilter();
             // 在这里添加字段过滤器
             $filter->like('title', 'タイトル');
-            //$filter->like('adminUser.name', 'オーサー');
-            //$filter->like('lastEditAdminUser.name', '更新者');
+            $filter->like('adminUser.name', 'オーサー');
+            $filter->like('lastEditAdminUser.name', '更新者');
             $filter->equal('category.name','種類')->select(['売買' => '売買', '賃貸' => '賃貸']);
         });
 
 
         return $grid;
-    }
-
-    /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(Topic::findOrFail($id));
-
-        $show->field('id', __('Id'));
-        $show->field('title', __('Title'));
-        $show->field('body', __('Body'));
-        $show->field('admin_user_id', __('Admin user id'));
-        $show->field('category_id', __('Category id'));
-        $show->field('last_edit_admin_user_id', __('Last edit admin user id'));
-        $show->field('order', __('Order'));
-        $show->field('excerpt', __('Excerpt'));
-        $show->field('slug', __('Slug'));
-        $show->field('img_id', __('Img id'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
-
-        return $show;
     }
 
     /**
@@ -132,10 +105,9 @@ class TopicsController extends AdminController
         $form->textarea('price.other', '補説')->rules('max:124');
         $form->latlong('latitude', 'longitude', 'Position')->default(['lat' => 34.98455650, 'lng' => 135.75357201207106])->height('500');
         $form->hasMany('imgs', '画作', function (Form\NestedForm $form) {
-            // $form->image('img')
-            //->resize(1980, 1164)
-            //->thumbnail('small', 430, 250);
-            $form->image('img');
+            $form->image('img')
+            ->resize(1980, 1164)
+            ->thumbnail('small', 430, 250);
         });
         $form->setWidth(6, 3);
         $form->confirm('ご確認');

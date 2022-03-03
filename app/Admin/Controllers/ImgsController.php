@@ -6,7 +6,6 @@ use App\Models\Img;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
-use Encore\Admin\Show;
 use Illuminate\Http\Request;
 use App\Models\Topic;
 
@@ -51,23 +50,6 @@ class ImgsController extends AdminController
         return $grid;
     }
 
-    /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(Img::findOrFail($id));
-
-        $show->field('id', __('Id'));
-        $show->field('img', __('Img'));
-        $show->field('type', __('Type'));
-        $show->field('topic_id', __('Topic id'));
-
-        return $show;
-    }
 
     /**
      * Make a form builder.

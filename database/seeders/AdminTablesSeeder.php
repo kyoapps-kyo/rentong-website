@@ -179,19 +179,19 @@ class AdminTablesSeeder extends Seeder
                     "permission" => NULL
                 ],
                 [
-                    "parent_id" => 21,
-                    "order" => 9,
-                    "title" => "history-images",
-                    "icon" => "fa-file-picture-o",
-                    "uri" => "/history-imgs",
-                    "permission" => NULL
-                ],
-                [
                     "parent_id" => 9,
                     "order" => 4,
                     "title" => "ポスト編集",
                     "icon" => "fa-archive",
                     "uri" => "/topics",
+                    "permission" => NULL
+                ],
+                [
+                    "parent_id" => 20,
+                    "order" => 9,
+                    "title" => "HISTORY-IMAGES",
+                    "icon" => "fa-picture-o",
+                    "uri" => "/history-imgs",
                     "permission" => NULL
                 ]
             ]
@@ -253,6 +253,18 @@ class AdminTablesSeeder extends Seeder
                     "slug" => "ext.media-manager",
                     "http_method" => "",
                     "http_path" => "/media*"
+                ],
+                [
+                    "name" => "about-history-images",
+                    "slug" => "about-history-images",
+                    "http_method" => "",
+                    "http_path" => "/history-imgs*"
+                ],
+                [
+                    "name" => "貿易事業",
+                    "slug" => "trade",
+                    "http_method" => "",
+                    "http_path" => "/trades*"
                 ]
             ]
         );
@@ -426,6 +438,18 @@ class AdminTablesSeeder extends Seeder
                     "permission_id" => 7
                 ],
                 [
+                    "role_id" => 2,
+                    "permission_id" => 9
+                ],
+                [
+                    "role_id" => 2,
+                    "permission_id" => 10
+                ],
+                [
+                    "role_id" => 2,
+                    "permission_id" => 11
+                ],
+                [
                     "role_id" => 3,
                     "permission_id" => 2
                 ],
@@ -440,6 +464,14 @@ class AdminTablesSeeder extends Seeder
                 [
                     "role_id" => 3,
                     "permission_id" => 7
+                ],
+                [
+                    "role_id" => 3,
+                    "permission_id" => 10
+                ],
+                [
+                    "role_id" => 3,
+                    "permission_id" => 11
                 ]
             ]
         );

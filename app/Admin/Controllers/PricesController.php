@@ -6,8 +6,6 @@ use App\Models\Price;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
-use Encore\Admin\Show;
-use Illuminate\Http\Request;
 use App\Models\Topic;
 
 class PricesController extends AdminController
@@ -47,27 +45,6 @@ class PricesController extends AdminController
         return $grid;
     }
 
-    /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(Price::findOrFail($id));
-
-        $show->field('id', __('Id'));
-        $show->field('price', __('Price'));
-        $show->field('rent', __('Rent'));
-        $show->field('administrative_fee', __('Administrative fee'));
-        $show->field('gratuity_fee', __('Gratuity fee'));
-        $show->field('deposit', __('Deposit'));
-        $show->field('other', __('Other'));
-        $show->field('topic_id', __('Topic id'));
-
-        return $show;
-    }
 
     /**
      * Make a form builder.
