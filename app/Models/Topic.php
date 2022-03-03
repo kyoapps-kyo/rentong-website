@@ -21,11 +21,11 @@ class Topic extends Model
     }
 
     public function adminUser(){
-        return $this->belongsTo(adminUser::class);
+        return $this->belongsTo(AdminUser::class);
     }
 
     public function lastEditAdminUser(){
-        return $this->belongsTo(adminUser::class,'last_edit_admin_user_id');
+        return $this->belongsTo(AdminUser::class,'last_edit_admin_user_id');
     }
 
     public function imgs(){

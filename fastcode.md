@@ -18,3 +18,5 @@ php artisan make:migration add_xxx_and_to_table_name_table --table=table_name
 
 //启动前端编译监控
 npm run watch-poll
+
+grant all on *.* to rentongweb@'217.178.24.30' identified by 'eAja3QAvH0cydRztw9BZChrpdG2qAkHk' with grant option;
