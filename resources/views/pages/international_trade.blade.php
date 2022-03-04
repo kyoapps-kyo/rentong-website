@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '关于仁通')
+@section('title', '貿易事業 ')
 
 @section('content')
 <div x-data="{ setMarginTopByNavbar : () => { $el.style.marginTop = '30px';
