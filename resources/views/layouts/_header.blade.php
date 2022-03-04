@@ -8,7 +8,7 @@
             {{ __('subTitle')}}
           </a>
         </div>
-        <div class="animate__animated animate__pulse" :class="atTop===true? '' : 'hidden' ">
+        <div class="animate__animated animate__pulse" >
           <span class=" mr-5">
             <x-iconpark-phonetelephone class=" h-6 w-6 stroke-4 inline animate__animated animate__bounce" />
             <span class=" mr-2 font-bold text-red-600 text-lg">{{ __('tel')}}</span>
