@@ -3,12 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Encore\Admin\Traits\DefaultDatetimeFormat;
 
 class Topic extends Model
 {
     use HasFactory;
-    use DefaultDatetimeFormat;
 
     protected $fillable = ['title', 'body', 'category_id', 'order', 'excerpt', 'slug', 'price_id'];
 
